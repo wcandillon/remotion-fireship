@@ -37,25 +37,17 @@ export const WeatherTitle: React.FC<{
     if (type === "thunderstorm") {
       return Math.round(frame / 12) % 2 === 0 ? 1 : 0;
     }
-    return 0;
+    return 1;
   }, [frame, type]);
   return (
     <AbsoluteFill>
       <h1
         style={{
           fontFamily: "PressStart",
-          color: "white",
-          textAlign: "center",
-          marginTop: 50,
-          fontSize: 50,
-        }}
-      />
-      <h1
-        style={{
-          fontFamily: "PressStart",
-          color: "white",
+          color: color,
           textAlign: "center",
           fontSize: 50,
+          marginTop: 100,
         }}
       >
         Forecast:

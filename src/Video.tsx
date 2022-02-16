@@ -3,8 +3,10 @@ import { Composition } from "remotion";
 import { Remotion } from "./Remotion";
 import { CANVAS } from "./Remotion/components/Canvas";
 import { CloudyMap } from "./Remotion/components/WeatherMap/CloudyMap";
+import { Explosion } from "./Remotion/components/WeatherMap/Explosion";
 import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
-import { ThunderstormMap } from "./Remotion/components/WeatherMap/Thunderstorm";
+import { Thunderstorm } from "./Remotion/components/WeatherMap/Thunderstorm";
+import { ThunderstormMap } from "./Remotion/components/WeatherMap/ThunderstormMap";
 
 const { width, height } = CANVAS;
 const fps = 30;
@@ -41,6 +43,22 @@ export const RemotionVideo = () => {
       <Composition
         id="ThunderstormMap"
         component={ThunderstormMap}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="Thunderstorm"
+        component={Thunderstorm}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="Explosion"
+        component={Explosion}
         durationInFrames={durationInFrames}
         fps={fps}
         width={1080}

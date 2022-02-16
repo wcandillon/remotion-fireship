@@ -34,7 +34,7 @@
 		"react-katex": "^2.0.2",
 		"react-native-web": "^0.16.3",
 		"remotion": "^2.0.0",
-		"simplex-noise": "^2.4.0",
+		"simplex-noise": "^3.0.1",
 		"styled-components": "^5.3.3",
 		"svg-path-properties": "^1.0.11",
 		"ts-node": "^9.1.1",
