@@ -1,11 +1,11 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 
-import { Clouds } from "./Clouds";
 import { France } from "./France";
+import { Rain } from "./Rain";
 import { WeatherTitle } from "./WeatherTitle";
 
-export const Map: React.FC = () => {
+export const RainMap: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
@@ -13,8 +13,8 @@ export const Map: React.FC = () => {
       }}
     >
       <France />
-      <Clouds />
-      <WeatherTitle />
+      <Rain />
+      <WeatherTitle type="rain" />
     </AbsoluteFill>
   );
 };

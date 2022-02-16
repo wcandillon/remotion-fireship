@@ -5,7 +5,9 @@ import { getFont } from "../../helpers/load-font";
 
 getFont();
 
-export const WeatherTitle: React.FC = () => {
+export const WeatherTitle: React.FC<{
+  type: "clouds" | "rain";
+}> = ({ type }) => {
   return (
     <AbsoluteFill>
       <h1
@@ -13,12 +15,10 @@ export const WeatherTitle: React.FC = () => {
           fontFamily: "PressStart",
           color: "white",
           textAlign: "center",
-          marginTop: 100,
+          marginTop: 50,
           fontSize: 50,
         }}
-      >
-        The forecast for{" "}
-      </h1>
+      />
       <h1
         style={{
           fontFamily: "PressStart",
@@ -27,7 +27,18 @@ export const WeatherTitle: React.FC = () => {
           fontSize: 50,
         }}
       >
-        February 30th:
+        Forecast:
+      </h1>
+      <h1
+        style={{
+          fontFamily: "PressStart",
+          color: "white",
+          textAlign: "center",
+          fontSize: 150,
+          marginTop: 50,
+        }}
+      >
+        {type === "clouds" ? "CLOUDS" : "RAIN"}
       </h1>
     </AbsoluteFill>
   );

@@ -2,7 +2,8 @@ import { Composition } from "remotion";
 
 import { Remotion } from "./Remotion";
 import { CANVAS } from "./Remotion/components/Canvas";
-import { Map } from "./Remotion/components/WeatherMap/Map";
+import { CloudyMap } from "./Remotion/components/WeatherMap/CloudyMap";
+import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
 
 const { width, height } = CANVAS;
 const fps = 30;
@@ -21,8 +22,16 @@ export const RemotionVideo = () => {
         height={height}
       />
       <Composition
-        id="Map"
-        component={Map}
+        id="CloudyMap"
+        component={CloudyMap}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="RainMap"
+        component={RainMap}
         durationInFrames={durationInFrames}
         fps={fps}
         width={1080}
