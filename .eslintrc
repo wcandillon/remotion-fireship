@@ -1,0 +1,20 @@
+{
+	"plugins": [
+		"@remotion"
+	],
+	"extends": [
+		"react-native-wcandillon"
+	],
+	"parserOptions": {
+    "project": "./tsconfig.json"
+  },
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"@remotion/no-mp4-import": "off",
+		"@remotion/warn-native-media-tag": "warn",
+		"@remotion/deterministic-randomness": "warn",
+		"@remotion/no-string-assets": "warn",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-unused-vars": "off"
+	}
+}
