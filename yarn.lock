@@ -485,6 +485,11 @@
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.4.tgz#bd86a43617df0594787d38b735f55c805becf1bc"
   integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
 
+"@types/web@^0.0.52":
+  version "0.0.52"
+  resolved "https://registry.yarnpkg.com/@types/web/-/web-0.0.52.tgz#25982fbfaa4f2972f65b4a627fc02cab1fe358b6"
+  integrity sha512-RMguya3mUmYtvC182gCT2NXfIVCD7IH9azFnFoIWaimZQ1PIZC2S6b7Is7Aoe90dYMm00HaQxidAulIkMB7yOQ==
+
 "@types/yauzl@^2.9.1":
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/@types/yauzl/-/yauzl-2.9.2.tgz#c48e5d56aff1444409e39fa164b0b4d4552a7b7a"
@@ -3619,10 +3624,10 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-simplex-noise@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/simplex-noise/-/simplex-noise-2.4.0.tgz#81b3458fb22dccc3bc8dd9a977c73797f86f523a"
-  integrity sha512-OjyDWm/QZjVbMrPxDVi9b2as+SeNn9EBXlrWVRlFW+TSyWMSXouDryXkQN0vf5YP+QZKobrmkvx1eQYPLtuqfw==
+simplex-noise@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/simplex-noise/-/simplex-noise-3.0.1.tgz#ad94e7bb6e53a973139e8999348cb6123b3347ba"
+  integrity sha512-eww0SFiWLyOaUKQMJ7gbdvQJvULeJdM/Y4BiC3rrOQnYHo+MSPh465/qeXSZkpTdB9/HthumpnYD3DobZweBBQ==
 
 slash@^3.0.0:
   version "3.0.0"
