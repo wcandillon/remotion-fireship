@@ -8,7 +8,7 @@ export const RainDrop: React.FC<{
   x: string;
   size: number;
 }> = ({ delay, x, size }) => {
-  const { height, fps } = useVideoConfig();
+  const { fps } = useVideoConfig();
   const frame = useCurrentFrame();
 
   const drop = spring({
@@ -19,7 +19,7 @@ export const RainDrop: React.FC<{
     },
   });
 
-  const top = interpolate(drop, [0, 1], [-200, height + 20]);
+  const top = interpolate(drop, [0, 1], [-0.2, 1.02]);
 
   return (
     <svg
@@ -29,7 +29,7 @@ export const RainDrop: React.FC<{
         width: 100,
         position: "absolute",
         left: x,
-        top,
+        top: top * 100 + "%",
         transform: `scale(${size})`,
       }}
     >

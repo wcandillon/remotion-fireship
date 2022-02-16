@@ -7,6 +7,7 @@ import { Explosion } from "./Remotion/components/WeatherMap/Explosion";
 import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
 import { Thunderstorm } from "./Remotion/components/WeatherMap/Thunderstorm";
 import { ThunderstormMap } from "./Remotion/components/WeatherMap/ThunderstormMap";
+import { WeatherMap } from "./Remotion/components/WeatherMap/WeatherMap";
 
 const { width, height } = CANVAS;
 const fps = 30;
@@ -63,6 +64,14 @@ export const RemotionVideo = () => {
         fps={fps}
         width={1080}
         height={1920}
+      />
+      <Composition
+        id="WeatherMap"
+        component={WeatherMap}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        width={1920}
+        height={1080}
       />
     </>
   );
