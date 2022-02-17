@@ -1,14 +1,15 @@
-import { Img, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { Img, staticFile } from "remotion";
 
-import { EASE_CLAMP, mix } from "./components/Animations";
+import { mix } from "./components/Animations";
 
-export const RemotionLogo = () => {
-  const frame = useCurrentFrame();
-  const fadeIn = interpolate(frame, [0, 20], [0, 1], EASE_CLAMP);
+interface RemotionLogoProps {
+  progress: number;
+}
+
+export const RemotionLogo = ({ progress }: RemotionLogoProps) => {
   return (
     <div
       style={{
-        background: "white",
         display: "flex",
         flex: 1,
         justifyContent: "center",
@@ -17,8 +18,8 @@ export const RemotionLogo = () => {
     >
       <div
         style={{
-          opacity: fadeIn,
-          transform: `translateY(${mix(fadeIn, 200, 0)}px)`,
+          opacity: progress,
+          transform: `translateY(${mix(progress, 200, 0)}px)`,
         }}
       >
         <Img src={staticFile("/images/remotion.png")} width={3000} />
