@@ -9,6 +9,7 @@ import { EASE_CLAMP, mix } from "./components/Animations";
 import { Background } from "./components/Background";
 import { Canvas, CANVAS } from "./components/Canvas";
 import { Intro } from "./Intro";
+import { RemotionLogo } from "./RemotionLogo";
 
 const LOGO_ASPECT = 533.33 / 547;
 const LOGO_WIDTH = 800;
@@ -32,6 +33,7 @@ export const UsingJavaScript = () => {
   );
   const offsetY = mix(dissolves, 0, 400);
   const opacity = 1 - dissolves;
+  const fade = interpolate(frame, [170, 190], [0, 1], EASE_CLAMP);
   return (
     <>
       <Canvas>
@@ -81,8 +83,16 @@ export const UsingJavaScript = () => {
           opacity={opacity}
         />
       </Canvas>
-      <AbsoluteFill>
+      <AbsoluteFill
+        style={{
+          opacity: 1 - fade,
+          transform: `translateY(${mix(1 - fade, -200, 0)}px)`,
+        }}
+      >
         <Intro frame={frame - (startTransitionAt + stagger)} />
+      </AbsoluteFill>
+      <AbsoluteFill>
+        <RemotionLogo progress={fade} />
       </AbsoluteFill>
     </>
   );

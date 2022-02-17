@@ -1,15 +1,7 @@
-import {
-  AbsoluteFill,
-  Audio,
-  Sequence,
-  Series,
-  staticFile,
-  Video,
-} from "remotion";
+import { Audio, Sequence, Series, staticFile, Video } from "remotion";
 
 import { WeatherMap } from "./components/WeatherMap/WeatherMap";
 import { HdTo4k } from "./helpers/hd-to-4k";
-import { RemotionLogo } from "./RemotionLogo";
 import { UsingJavaScript } from "./UsingJavaScript";
 
 const audio = staticFile("/audio.wav");
@@ -23,11 +15,8 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={100}>
           <Video src={video} />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={170}>
+        <Series.Sequence durationInFrames={170 + 50}>
           <UsingJavaScript />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={50}>
-          <RemotionLogo />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
           <Video src={usingJS} startFrom={160} />
