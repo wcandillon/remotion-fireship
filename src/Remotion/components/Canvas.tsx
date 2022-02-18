@@ -15,6 +15,17 @@ interface CanvasProps {
 export const Canvas = ({ children }: CanvasProps) => {
   return (
     <svg width={CANVAS.width} height={CANVAS.height}>
+      <linearGradient
+        id="s1"
+        x1="50%"
+        y1="0%"
+        x2="50%"
+        y2="100%"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stopColor="#47A5EB" />
+        <stop offset="100%" stopColor="#89DEBB" />
+      </linearGradient>
       {children}
     </svg>
   );
