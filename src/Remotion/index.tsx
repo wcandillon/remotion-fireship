@@ -12,6 +12,7 @@ import { Flipbook } from "./Flipbook";
 import { HdTo4k } from "./helpers/hd-to-4k";
 import { UsingJavaScript } from "./UsingJavaScript";
 import { CANVAS } from "./components/Canvas";
+import { StorifyData } from "./StorifyData";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
@@ -60,15 +61,10 @@ export const Remotion = () => {
             }}
           />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={110}>
-          <AbsoluteFill
-            style={{
-              background: "green",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          />
+        <Series.Sequence durationInFrames={120}>
+          <HdTo4k>
+            <StorifyData />
+          </HdTo4k>
         </Series.Sequence>
       </Series>
       <Sequence from={1250} durationInFrames={200}>
