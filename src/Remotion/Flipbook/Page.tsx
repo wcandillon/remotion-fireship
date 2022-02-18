@@ -1,13 +1,14 @@
 import { mix } from "../components/Animations";
 import { CANVAS } from "../components/Canvas";
 
-import { Cube, STROKE_WIDTH } from "./Cube";
+import { Cube } from "./Cube";
 
 const ROWS = 2;
 const COLS = 4;
 export const PAGES = ROWS * COLS;
 const startWidth = CANVAS.width / COLS;
 const startHeight = CANVAS.height / ROWS;
+const STROKE_WIDTH = 15;
 
 interface PageProps {
   index: number;
@@ -39,6 +40,7 @@ export const Page = ({ index, overlay, offset }: PageProps) => {
         strokeLinejoin="round"
       />
       <Cube
+        strokeWidth={mix(overlay, STROKE_WIDTH, STROKE_WIDTH * 2)}
         center={center}
         size={size}
         transform={[

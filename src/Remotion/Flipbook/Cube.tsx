@@ -19,15 +19,15 @@ const TOP_LEFT = 0;
 const TOP_RIGHT = 1;
 const BOTTOM_RIGHT = 2;
 const BOTTOM_LEFT = 3;
-export const STROKE_WIDTH = 15;
 
 interface CubeProps {
   size: number;
   transform: Transforms3d;
   center: { x: number; y: number };
+  strokeWidth: number;
 }
 
-export const Cube = ({ size, transform, center }: CubeProps) => {
+export const Cube = ({ size, transform, center, strokeWidth }: CubeProps) => {
   const size2 = size / 2;
   const vertices = [
     { x: center.x - size2, y: center.y + size2, z: size2 },
@@ -95,7 +95,7 @@ export const Cube = ({ size, transform, center }: CubeProps) => {
             key={key}
             points={[...plane, plane[0]].map((v) => `${v.x},${v.y}`).join(" ")}
             fill="transparent"
-            strokeWidth={STROKE_WIDTH}
+            strokeWidth={strokeWidth}
             strokeLinejoin="round"
             stroke="url(#s1)"
           />

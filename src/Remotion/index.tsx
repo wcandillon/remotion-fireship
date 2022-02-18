@@ -26,7 +26,7 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={90}>
           <Video src={flipbook} />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={165}>
+        <Series.Sequence durationInFrames={180}>
           <Flipbook />
         </Series.Sequence>
       </Series>
