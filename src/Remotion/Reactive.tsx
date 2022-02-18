@@ -22,6 +22,32 @@ export const typeWriter = (text: string, progress: number) => {
     .join("");
 };
 
+const typeString = (progress: number) => {
+  const delta = 1 / "cyanmagenta".length;
+  const states = [
+    "cyan",
+    "cya",
+    "cy",
+    "c",
+    "",
+    "m",
+    "ma",
+    "mag",
+    "mage",
+    "magen",
+    "magent",
+    "magenta",
+  ];
+  return states[Math.floor(progress / delta)];
+};
+
+const validColor = (color: string) => {
+  if (color === "magenta") {
+    return "magenta";
+  }
+  return "cyan";
+};
+
 const { center } = CANVAS;
 const PADDING = 200;
 const height = 800;
@@ -33,7 +59,8 @@ export const Reactive = () => {
     ", World!",
     interpolate(frame, [0, 15], [0, 1], EASE_CLAMP)
   );
-  const color = "cyan";
+  const colorProgress = interpolate(frame, [25, 65], [0, 1], EASE_CLAMP);
+  const color = typeString(colorProgress);
   const text = `Hello${world}`;
   const source = `<HelloWorld
   color="${color}"
@@ -55,9 +82,14 @@ export const Reactive = () => {
       </View>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <View>
-          <Logo color="cyan" />
+          <Logo color={validColor(color)} />
           <Text
-            style={{ fontSize: 200, color, textAlign: "center", marginTop: 64 }}
+            style={{
+              fontSize: 200,
+              color: validColor(color),
+              textAlign: "center",
+              marginTop: 64,
+            }}
           >
             {text}
           </Text>
