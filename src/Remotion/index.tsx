@@ -1,14 +1,23 @@
-import { Audio, Sequence, Series, staticFile, Video } from "remotion";
+import {
+  AbsoluteFill,
+  Audio,
+  Sequence,
+  Series,
+  staticFile,
+  Video,
+} from "remotion";
 
 import { WeatherMap } from "./components/WeatherMap/WeatherMap";
 import { Flipbook } from "./Flipbook";
 import { HdTo4k } from "./helpers/hd-to-4k";
 import { UsingJavaScript } from "./UsingJavaScript";
+import { CANVAS } from "./components/Canvas";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
 const usingJS = staticFile("/videos/using-javascript.mov");
 const flipbook = staticFile("/videos/flipbook.mov");
+const react = staticFile("/videos/react.mov");
 
 export const Remotion = () => {
   return (
@@ -28,6 +37,38 @@ export const Remotion = () => {
         </Series.Sequence>
         <Series.Sequence durationInFrames={180}>
           <Flipbook />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={160}>
+          <AbsoluteFill
+            style={{
+              background: "white",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Video src={react} width={CANVAS.width} />
+          </AbsoluteFill>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={60}>
+          <AbsoluteFill
+            style={{
+              background: "red",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={110}>
+          <AbsoluteFill
+            style={{
+              background: "green",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          />
         </Series.Sequence>
       </Series>
       <Sequence from={1250} durationInFrames={200}>
