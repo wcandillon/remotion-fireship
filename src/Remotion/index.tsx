@@ -1,6 +1,7 @@
 import { Audio, Sequence, Series, staticFile, Video } from "remotion";
 
 import { WeatherMap } from "./components/WeatherMap/WeatherMap";
+import { Flipbook } from "./Flipbook";
 import { HdTo4k } from "./helpers/hd-to-4k";
 import { UsingJavaScript } from "./UsingJavaScript";
 
@@ -24,6 +25,9 @@ export const Remotion = () => {
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
           <Video src={flipbook} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={165}>
+          <Flipbook />
         </Series.Sequence>
       </Series>
       <Sequence from={1250} durationInFrames={200}>
