@@ -12,8 +12,14 @@ export const Flipbook = () => {
   const frame = useCurrentFrame();
   const overlay = interpolate(
     frame,
-    [PAGES * duration + 30, PAGES * duration + 45],
+    [PAGES * duration + 75, PAGES * duration + 90],
     [0, 1],
+    EASE_CLAMP
+  );
+  const offset = interpolate(
+    frame,
+    [PAGES * duration + 90, PAGES * duration + 115],
+    [0, 3],
     EASE_CLAMP
   );
   return (
@@ -29,7 +35,7 @@ export const Flipbook = () => {
               EASE_CLAMP
             )}
           >
-            <Page key={index} index={index} overlay={overlay} />
+            <Page key={index} index={index} overlay={overlay} offset={offset} />
           </g>
         ))}
       </Canvas>
