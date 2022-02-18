@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Series } from "remotion";
 
+import { BG_COLOR } from "../../helpers/colors";
 import { Background } from "../Background";
 import { Canvas } from "../Canvas";
 
@@ -10,7 +11,7 @@ import { ThunderstormMap } from "./ThunderstormMap";
 
 export const WeatherMap: React.FC = () => {
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ backgroundColor: BG_COLOR }}>
       <AbsoluteFill
         style={{
           height: 1920,
