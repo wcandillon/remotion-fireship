@@ -1,10 +1,9 @@
-import type { OnMount } from "@monaco-editor/react";
-import Editor from "@monaco-editor/react";
 import { Text, View } from "react-native";
 import { interpolate, useCurrentFrame } from "remotion";
 
 import { EASE_CLAMP } from "./components/Animations";
 import { CANVAS } from "./components/Canvas";
+import { Code } from "./components/Code";
 import { Logo } from "./components/Logo";
 
 //const theme = require("./one-dark.json");
@@ -30,21 +29,17 @@ const width = center.x - PADDING;
 
 export const Reactive = () => {
   const frame = useCurrentFrame();
-  const onMount: OnMount = (editor) => {
-    editor.updateOptions({ fontSize: 128 });
-    //monaco.editor.defineTheme("OneDark", theme);
-    //monaco.editor.setTheme("OneDark");
-  };
-
   const world = typeWriter(
     ", World!",
-    interpolate(frame, [0, 100], [0, 1], EASE_CLAMP)
+    interpolate(frame, [0, 15], [0, 1], EASE_CLAMP)
   );
   const color = "cyan";
+  const text = `Hello${world}`;
   const source = `<HelloWorld
   color="${color}"
-  text="Hello${world}"
+  text="${text}"
 />`;
+
   return (
     <View style={{ flex: 1, flexDirection: "row", backgroundColor: "#282C34" }}>
       <View
@@ -55,13 +50,7 @@ export const Reactive = () => {
         }}
       >
         <View style={{ height, width }}>
-          <Editor
-            theme="vs-dark"
-            height={height}
-            defaultLanguage="javascript"
-            defaultValue={source}
-            onMount={onMount}
-          />
+          <Code source={source} />
         </View>
       </View>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -70,7 +59,7 @@ export const Reactive = () => {
           <Text
             style={{ fontSize: 200, color, textAlign: "center", marginTop: 64 }}
           >
-            Hello, World!
+            {text}
           </Text>
         </View>
       </View>
