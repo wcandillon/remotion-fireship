@@ -10,7 +10,7 @@ import { ThunderstormMap } from "./ThunderstormMap";
 
 export const WeatherMap: React.FC = () => {
   return (
-    <div>
+    <AbsoluteFill>
       <AbsoluteFill
         style={{
           height: 1920,
@@ -19,6 +19,7 @@ export const WeatherMap: React.FC = () => {
           transform: "scale(0.5)",
           marginTop: -(1920 - 1080) / 2,
           marginLeft: -150,
+          backgroundColor: "#23292f",
         }}
       >
         <Series>
@@ -33,6 +34,6 @@ export const WeatherMap: React.FC = () => {
           </Series.Sequence>
         </Series>
       </AbsoluteFill>
-    </div>
+    </AbsoluteFill>
   );
 };

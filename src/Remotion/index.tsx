@@ -13,6 +13,8 @@ import { HdTo4k } from "./helpers/hd-to-4k";
 import { UsingJavaScript } from "./UsingJavaScript";
 import { CANVAS } from "./components/Canvas";
 import { StorifyData } from "./StorifyData";
+import { WeatherAPI } from "./WeatherAPI";
+import { Component } from "./WeatherAPI/Component";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
@@ -67,6 +69,12 @@ export const Remotion = () => {
           </HdTo4k>
         </Series.Sequence>
       </Series>
+      <Sequence from={1070} durationInFrames={90}>
+        <WeatherAPI />
+      </Sequence>
+      <Sequence from={1160} durationInFrames={90}>
+        <Component />
+      </Sequence>
       <Sequence from={1250} durationInFrames={200}>
         <HdTo4k>
           <WeatherMap />
