@@ -10,12 +10,12 @@ import { CANVAS } from "./components/Canvas";
 import { StorifyData } from "./StorifyData";
 import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
+import { VideoInReact } from "./VideoInReact";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
 const usingJS = staticFile("/videos/using-javascript.mov");
 const flipbook = staticFile("/videos/flipbook.mov");
-const videoInReact = staticFile("/videos/video-in-react.mov");
 const introducingRemotion = staticFile("/videos/introducing-remotion.mov");
 
 export const Remotion = () => {
@@ -41,18 +41,8 @@ export const Remotion = () => {
           <Reactive />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
-          <View
-            style={{
-              flex: 1,
-              backgroundColor: "#282C34",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Video src={videoInReact} height={CANVAS.height} />
-          </View>
+          <VideoInReact />
         </Series.Sequence>
-
         <Series.Sequence durationInFrames={42}>
           <Video src={introducingRemotion} height={CANVAS.height} />
         </Series.Sequence>
