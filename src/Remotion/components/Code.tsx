@@ -52,7 +52,14 @@ export const Code = ({ source }: CodeProps) => {
       >
         <Highlight {...defaultProps} code={source} language="jsx" theme={theme}>
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={{ ...style, fontSize: 120 }}>
+            <pre
+              className={className}
+              style={{
+                ...style,
+                fontSize: 120,
+                fontFamily: "SF Mono, Menlo, Monaco, 'Courier New', monospace",
+              }}
+            >
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (

@@ -88,6 +88,7 @@ export const Reactive = () => {
               color: validColor(color),
               textAlign: "center",
               marginTop: 64,
+              fontFamily: "Rubik-Medium",
             }}
           >
             {text}

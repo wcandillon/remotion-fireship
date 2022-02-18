@@ -1,22 +1,20 @@
 import { Audio, Sequence, Series, staticFile, Video } from "remotion";
-import { View } from "react-native";
 
 import { WeatherMap } from "./components/WeatherMap/WeatherMap";
 import { Flipbook } from "./Flipbook";
 import { HdTo4k } from "./helpers/hd-to-4k";
 import { UsingJavaScript } from "./UsingJavaScript";
 import { Reactive } from "./Reactive";
-import { CANVAS } from "./components/Canvas";
 import { StorifyData } from "./StorifyData";
 import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
 import { VideoInReact } from "./VideoInReact";
+import { IntroducingRemotion } from "./IntroducingRemotion";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
 const usingJS = staticFile("/videos/using-javascript.mov");
 const flipbook = staticFile("/videos/flipbook.mov");
-const introducingRemotion = staticFile("/videos/introducing-remotion.mov");
 
 export const Remotion = () => {
   return (
@@ -44,7 +42,7 @@ export const Remotion = () => {
           <VideoInReact />
         </Series.Sequence>
         <Series.Sequence durationInFrames={42}>
-          <Video src={introducingRemotion} height={CANVAS.height} />
+          <IntroducingRemotion />
         </Series.Sequence>
         <Series.Sequence durationInFrames={120}>
           <HdTo4k>
