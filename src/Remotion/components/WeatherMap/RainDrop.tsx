@@ -24,7 +24,6 @@ export const RainDrop: React.FC<{
   return (
     <svg
       viewBox={`0 0 ${viewSize} ${viewSize}`}
-      xmlSpace="preserve"
       style={{
         width: 100,
         position: "absolute",
