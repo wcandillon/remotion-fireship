@@ -8,6 +8,7 @@ import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
 import { Thunderstorm } from "./Remotion/components/WeatherMap/Thunderstorm";
 import { ThunderstormMap } from "./Remotion/components/WeatherMap/ThunderstormMap";
 import { WeatherMap } from "./Remotion/components/WeatherMap/WeatherMap";
+import { StorifyData } from "./Remotion/StorifyData";
 
 const { width, height } = CANVAS;
 const fps = 30;
@@ -68,6 +69,14 @@ export const RemotionVideo = () => {
       <Composition
         id="WeatherMap"
         component={WeatherMap}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="Storify"
+        component={StorifyData}
         durationInFrames={durationInFrames}
         fps={fps}
         width={1920}

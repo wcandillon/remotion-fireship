@@ -1,10 +1,9 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 
-import { Canvas, CANVAS } from "../components/Canvas";
-import { WeatherMap } from "../components/WeatherMap/WeatherMap";
+import { CANVAS } from "../components/Canvas";
 
-export const HdTo4k: React.FC = () => {
+export const HdTo4k: React.FC = ({ children }) => {
   return (
     <AbsoluteFill>
       <AbsoluteFill
@@ -14,7 +13,7 @@ export const HdTo4k: React.FC = () => {
           }px) translateY(${(CANVAS.height - 1080) / 2}px)`,
         }}
       >
-        <WeatherMap />
+        {children}
       </AbsoluteFill>
     </AbsoluteFill>
   );
