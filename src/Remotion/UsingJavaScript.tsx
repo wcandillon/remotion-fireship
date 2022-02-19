@@ -36,7 +36,6 @@ export const UsingJavaScript = () => {
   const fade = interpolate(frame, [170, 190], [0, 1], EASE_CLAMP);
   return (
     <>
-      <AbsoluteFill style={{ backgroundColor: BG_COLOR2 }} />
       <Canvas>
         <filter id="filter">
           <feTurbulence
@@ -64,6 +63,13 @@ export const UsingJavaScript = () => {
             stdDeviation={`0 ${mix(dissolves, 0, 30)}`}
           />
         </filter>
+        <rect
+          x={0}
+          y={0}
+          width={CANVAS.width}
+          height={CANVAS.height}
+          fill="#FBF6EB"
+        />
         <image
           filter="url(#filter)"
           href={staticFile("/images/pr1.svg")}

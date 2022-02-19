@@ -30,7 +30,7 @@ export const RemotionLogo = ({ progress }: RemotionLogoProps) => {
         style={{
           marginLeft: 128,
           fontFamily: "SF Pro",
-          color: "white",
+          color: "black",
           fontSize: 400,
           fontWeight: "700",
         }}
