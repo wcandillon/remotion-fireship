@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { interpolate, spring, useVideoConfig } from "remotion";
 import styled from "styled-components";
 
 import { Arc } from "./Arc";

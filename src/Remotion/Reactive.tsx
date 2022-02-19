@@ -5,7 +5,6 @@ import { EASE_CLAMP } from "./components/Animations";
 import { CANVAS } from "./components/Canvas";
 import { Code } from "./components/Code";
 import { Logo } from "./components/Logo";
-import { BG_COLOR } from "./helpers/colors";
 
 export const typeWriter = (text: string, progress: number) => {
   const letters = text.split("");
