@@ -11,6 +11,7 @@ import { Component } from "./WeatherAPI/Component";
 import { DataDriven } from "./DataDriven";
 import { VideoInReact } from "./VideoInReact";
 import { IntroducingRemotion } from "./IntroducingRemotion";
+import { LikeAndSubscribe } from "./LikeAndSubscribe";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
@@ -64,6 +65,9 @@ export const Remotion = () => {
       </Sequence>
       <Sequence from={1450} durationInFrames={200}>
         <DataDriven />
+      </Sequence>
+      <Sequence from={1650} durationInFrames={200}>
+        <LikeAndSubscribe />
       </Sequence>
       <Audio src={audio} />
     </>
