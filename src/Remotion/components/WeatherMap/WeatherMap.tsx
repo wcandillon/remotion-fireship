@@ -17,8 +17,6 @@ interface ContainerProps {
   children: ReactNode | ReactNode[];
 }
 
-const scale = 1.25;
-
 const Container = ({ children }: ContainerProps) => {
   const [c1, c2] = React.Children.toArray(children);
   return (
