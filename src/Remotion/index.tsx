@@ -10,6 +10,7 @@ import { CANVAS } from "./components/Canvas";
 import { StorifyData } from "./StorifyData";
 import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
+import { DataDriven } from "./DataDriven";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
@@ -72,6 +73,9 @@ export const Remotion = () => {
         <HdTo4k>
           <WeatherMap />
         </HdTo4k>
+      </Sequence>
+      <Sequence from={1450} durationInFrames={200}>
+        <DataDriven />
       </Sequence>
       <Audio src={audio} />
     </>

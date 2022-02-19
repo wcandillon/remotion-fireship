@@ -8,6 +8,7 @@ import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
 import { Thunderstorm } from "./Remotion/components/WeatherMap/Thunderstorm";
 import { ThunderstormMap } from "./Remotion/components/WeatherMap/ThunderstormMap";
 import { WeatherMap } from "./Remotion/components/WeatherMap/WeatherMap";
+import { DataDriven } from "./Remotion/DataDriven";
 import { StorifyData } from "./Remotion/StorifyData";
 
 const { width, height } = CANVAS;
@@ -81,6 +82,14 @@ export const RemotionVideo = () => {
         fps={fps}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="DataDriven"
+        component={DataDriven}
+        durationInFrames={200}
+        fps={fps}
+        width={width}
+        height={height}
       />
     </>
   );
