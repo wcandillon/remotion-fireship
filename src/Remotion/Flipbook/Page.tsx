@@ -1,5 +1,6 @@
 import { mix } from "../components/Animations";
 import { CANVAS } from "../components/Canvas";
+import { BG_COLOR3 } from "../helpers/colors";
 
 import { Cube } from "./Cube";
 
@@ -34,10 +35,11 @@ export const Page = ({ index, overlay, offset }: PageProps) => {
         y={0}
         width={width - 2 * PADDING}
         height={height - 2 * PADDING}
-        fill="white"
+        fill={BG_COLOR3}
         stroke="black"
         strokeWidth={STROKE_WIDTH}
         strokeLinejoin="round"
+        rx={25}
       />
       <Cube
         strokeWidth={mix(overlay, STROKE_WIDTH, STROKE_WIDTH * 2)}
