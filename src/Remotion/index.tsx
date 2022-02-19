@@ -26,10 +26,10 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={100}>
           <Video src={video} />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={215}>
+        <Series.Sequence durationInFrames={240}>
           <UsingJavaScript />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={125}>
+        <Series.Sequence durationInFrames={120}>
           <Video src={usingRemotion} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
