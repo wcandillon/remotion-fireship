@@ -5,8 +5,7 @@ import { EASE_CLAMP } from "./components/Animations";
 import { CANVAS } from "./components/Canvas";
 import { Code } from "./components/Code";
 import { Logo } from "./components/Logo";
-
-//const theme = require("./one-dark.json");
+import { BG_COLOR } from "./helpers/colors";
 
 export const typeWriter = (text: string, progress: number) => {
   const letters = text.split("");
@@ -43,9 +42,9 @@ const typeString = (progress: number) => {
 
 const validColor = (color: string) => {
   if (color === "magenta") {
-    return "magenta";
+    return "deeppink";
   }
-  return "cyan";
+  return "#61DAFB";
 };
 
 const { center } = CANVAS;
@@ -68,7 +67,7 @@ export const Reactive = () => {
 />`;
 
   return (
-    <View style={{ flex: 1, flexDirection: "row", backgroundColor: "#282C34" }}>
+    <View style={{ flex: 1, flexDirection: "row", backgroundColor: "#16181D" }}>
       <View
         style={{
           flex: 1,
@@ -89,6 +88,7 @@ export const Reactive = () => {
               color: validColor(color),
               textAlign: "center",
               marginTop: 64,
+              fontFamily: "Rubik-Medium",
             }}
           >
             {text}
