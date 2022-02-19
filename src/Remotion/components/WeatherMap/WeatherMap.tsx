@@ -2,8 +2,6 @@ import React from "react";
 import { AbsoluteFill, Series } from "remotion";
 
 import { BG_COLOR } from "../../helpers/colors";
-import { Background } from "../Background";
-import { Canvas } from "../Canvas";
 
 import { CloudyMap } from "./CloudyMap";
 import { RainMap } from "./RainMap";
