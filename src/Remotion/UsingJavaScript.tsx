@@ -6,10 +6,10 @@ import {
 } from "remotion";
 
 import { EASE_CLAMP, mix } from "./components/Animations";
-import { Background } from "./components/Background";
 import { Canvas, CANVAS } from "./components/Canvas";
 import { Intro } from "./Intro";
 import { RemotionLogo } from "./RemotionLogo";
+import { BG_COLOR2 } from "./helpers/colors";
 
 const LOGO_ASPECT = 533.33 / 547;
 const LOGO_WIDTH = 800;
@@ -36,8 +36,7 @@ export const UsingJavaScript = () => {
   const fade = interpolate(frame, [170, 190], [0, 1], EASE_CLAMP);
   return (
     <>
-      <Canvas>
-        <Background />
+      <Canvas color={BG_COLOR2}>
         <filter id="filter">
           <feTurbulence
             type="turbulence"

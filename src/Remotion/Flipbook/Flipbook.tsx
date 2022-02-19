@@ -1,6 +1,5 @@
 import { useCurrentFrame, interpolate } from "remotion";
 
-import { Background } from "../components/Background";
 import { Canvas } from "../components/Canvas";
 import { EASE_CLAMP } from "../components/Animations";
 
@@ -25,7 +24,6 @@ export const Flipbook = () => {
   return (
     <div>
       <Canvas>
-        <Background />
         {new Array(PAGES).fill(0).map((_, index) => (
           <g
             opacity={interpolate(

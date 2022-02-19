@@ -10,9 +10,10 @@ export const CANVAS = {
 
 interface CanvasProps {
   children: ReactNode | ReactNode[];
+  color?: string;
 }
 
-export const Canvas = ({ children }: CanvasProps) => {
+export const Canvas = ({ children, color }: CanvasProps) => {
   return (
     <svg width={CANVAS.width} height={CANVAS.height}>
       <linearGradient
@@ -26,6 +27,7 @@ export const Canvas = ({ children }: CanvasProps) => {
         <stop offset="0%" stopColor="#47A5EB" />
         <stop offset="100%" stopColor="#89DEBB" />
       </linearGradient>
+      {color ?? <rect x={0} y={0} width={width} height={height} fill={color} />}
       {children}
     </svg>
   );
