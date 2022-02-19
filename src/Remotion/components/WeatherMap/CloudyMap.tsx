@@ -7,11 +7,7 @@ import { WeatherTitle } from "./WeatherTitle";
 
 export const CloudyMap: React.FC = () => {
   return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: "#13001e",
-      }}
-    >
+    <AbsoluteFill>
       <France />
       <Clouds />
       <WeatherTitle type="clouds" />

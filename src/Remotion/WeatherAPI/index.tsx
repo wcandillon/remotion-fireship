@@ -1,18 +1,23 @@
 import React from "react";
-import { AbsoluteFill, Img, staticFile } from "remotion";
+import { AbsoluteFill } from "remotion";
+
+import { Code } from "../components/Code";
+import { BG_COLOR2 } from "../helpers/colors";
 
 export const WeatherAPI: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#221d28",
+        backgroundColor: BG_COLOR2,
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Img
-        style={{ transform: "scale(3)" }}
-        src={staticFile("images/weatherapi.png")}
+      <Code
+        fontSize={110}
+        source={`const res = fetch("https://bestweatherapi.com/v1");
+const weather = await res.json();
+setWeather(weather);`}
       />
     </AbsoluteFill>
   );
