@@ -31,7 +31,7 @@ export const Thunderstorm: React.FC = () => {
           const color = interpolateColors(
             random(`color${i}${j}`),
             [0, 1],
-            ["white", "gray"]
+            ["white", "#ccc"]
           );
           return (
             <div
