@@ -10,10 +10,10 @@ import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
 import { VideoInReact } from "./VideoInReact";
 import { IntroducingRemotion } from "./IntroducingRemotion";
+import { ProgrammaticVideo } from "./ProgrammaticVideo";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
-const usingJS = staticFile("/videos/using-javascript.mov");
 const flipbook = staticFile("/videos/flipbook.mov");
 
 export const Remotion = () => {
@@ -27,7 +27,7 @@ export const Remotion = () => {
           <UsingJavaScript />
         </Series.Sequence>
         <Series.Sequence durationInFrames={110}>
-          <Video src={usingJS} />
+          <ProgrammaticVideo />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
           <Video src={flipbook} />
