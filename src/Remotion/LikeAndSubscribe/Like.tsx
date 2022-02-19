@@ -22,7 +22,7 @@ export const Like: React.FC = () => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height={300}
+        height={500}
         viewBox="0 0 24 24"
         fill="#fff"
         style={{

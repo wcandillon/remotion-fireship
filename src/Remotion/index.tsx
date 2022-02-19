@@ -12,6 +12,7 @@ import { DataDriven } from "./DataDriven";
 import { VideoInReact } from "./VideoInReact";
 import { IntroducingRemotion } from "./IntroducingRemotion";
 import { LikeAndSubscribe } from "./LikeAndSubscribe";
+import { CheckOnGithub } from "./CheckOnGithub/Github";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
@@ -66,8 +67,11 @@ export const Remotion = () => {
       <Sequence from={1450} durationInFrames={200}>
         <DataDriven />
       </Sequence>
-      <Sequence from={1650} durationInFrames={200}>
+      <Sequence from={1650} durationInFrames={50}>
         <LikeAndSubscribe />
+      </Sequence>
+      <Sequence from={1700} durationInFrames={50}>
+        <CheckOnGithub />
       </Sequence>
       <Audio src={audio} />
     </>

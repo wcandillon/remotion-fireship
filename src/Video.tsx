@@ -1,6 +1,7 @@
 import { Composition } from "remotion";
 
 import { Remotion } from "./Remotion";
+import { CheckOnGithub } from "./Remotion/CheckOnGithub/Github";
 import { CANVAS } from "./Remotion/components/Canvas";
 import { CloudyMap } from "./Remotion/components/WeatherMap/CloudyMap";
 import { Explosion } from "./Remotion/components/WeatherMap/Explosion";
@@ -95,6 +96,14 @@ export const RemotionVideo = () => {
       <Composition
         id="LikeAndSubscribe"
         component={LikeAndSubscribe}
+        durationInFrames={200}
+        fps={fps}
+        width={width}
+        height={height}
+      />
+      <Composition
+        id="CheckOnGithub"
+        component={CheckOnGithub}
         durationInFrames={200}
         fps={fps}
         width={width}
