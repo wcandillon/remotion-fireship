@@ -50,6 +50,16 @@ export const Page = ({ index, overlay, offset }: PageProps) => {
           { rotateY: (progress * -Math.PI) / 4 },
         ]}
       />
+      <text
+        fontFamily="Rubik"
+        fontWeight="500"
+        fill="white"
+        fontSize={150}
+        y={150}
+        x={650}
+      >
+        {index}
+      </text>
     </g>
   );
 };
