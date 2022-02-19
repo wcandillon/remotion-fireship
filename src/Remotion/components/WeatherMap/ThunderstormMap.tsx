@@ -8,11 +8,7 @@ import { WeatherTitle } from "./WeatherTitle";
 
 export const ThunderstormMap: React.FC = () => {
   return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: "#13001e",
-      }}
-    >
+    <AbsoluteFill>
       <France />
       <Explosion />
       <Thunderstorm />

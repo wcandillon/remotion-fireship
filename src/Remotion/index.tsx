@@ -60,9 +60,7 @@ export const Remotion = () => {
         <Component />
       </Sequence>
       <Sequence from={1250} durationInFrames={200}>
-        <HdTo4k>
-          <WeatherMap />
-        </HdTo4k>
+        <WeatherMap />
       </Sequence>
       <Sequence from={1450} durationInFrames={200}>
         <DataDriven />
