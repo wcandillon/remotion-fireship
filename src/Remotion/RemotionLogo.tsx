@@ -1,6 +1,10 @@
+import { Text, View } from "react-native";
 import { Img, staticFile } from "remotion";
 
 import { mix } from "./components/Animations";
+
+const LOGO_WIDTH = 800;
+const LOGO_HEIGHT = 800;
 
 interface RemotionLogoProps {
   progress: number;
@@ -8,22 +12,31 @@ interface RemotionLogoProps {
 
 export const RemotionLogo = ({ progress }: RemotionLogoProps) => {
   return (
-    <div
+    <View
       style={{
-        display: "flex",
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "row",
+        opacity: progress,
+        transform: [{ translateY: mix(progress, 200, 0) }],
       }}
     >
-      <div
+      <Img
+        src={staticFile("/images/logo.png")}
+        style={{ width: LOGO_WIDTH, height: LOGO_HEIGHT }}
+      />
+      <Text
         style={{
-          opacity: progress,
-          transform: `translateY(${mix(progress, 200, 0)}px)`,
+          marginLeft: 128,
+          fontFamily: "SF Pro",
+          color: "white",
+          fontSize: 400,
+          fontWeight: "700",
         }}
       >
-        <Img src={staticFile("/images/remotion.png")} width={3000} />
-      </div>
-    </div>
+        Remotion
+      </Text>
+    </View>
   );
 };

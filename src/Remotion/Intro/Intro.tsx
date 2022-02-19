@@ -119,7 +119,7 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
               position: "absolute",
             }}
           >
-            <ZIndex1 style={{ color: "black" }}>{text}</ZIndex1>
+            <ZIndex1 style={{ color: "white" }}>{text}</ZIndex1>
           </foreignObject>
         </g>
       </svg>

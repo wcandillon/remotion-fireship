@@ -36,7 +36,8 @@ export const UsingJavaScript = () => {
   const fade = interpolate(frame, [170, 190], [0, 1], EASE_CLAMP);
   return (
     <>
-      <Canvas color={BG_COLOR2}>
+      <AbsoluteFill style={{ backgroundColor: BG_COLOR2 }} />
+      <Canvas>
         <filter id="filter">
           <feTurbulence
             type="turbulence"
