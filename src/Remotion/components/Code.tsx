@@ -23,9 +23,10 @@ const Circle = ({ color }: CircleProps) => (
 
 interface CodeProps {
   source: string;
+  fontSize: number;
 }
 
-export const Code = ({ source }: CodeProps) => {
+export const Code = ({ source, fontSize }: CodeProps) => {
   return (
     <View>
       <View
@@ -56,7 +57,7 @@ export const Code = ({ source }: CodeProps) => {
               className={className}
               style={{
                 ...style,
-                fontSize: 120,
+                fontSize,
                 fontFamily: "SF Mono, Menlo, Monaco, 'Courier New', monospace",
               }}
             >
@@ -73,4 +74,8 @@ export const Code = ({ source }: CodeProps) => {
       </View>
     </View>
   );
+};
+
+Code.defaultProps = {
+  fontSize: 120,
 };
