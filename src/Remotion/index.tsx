@@ -8,9 +8,12 @@ import { Reactive } from "./Reactive";
 import { StorifyData } from "./StorifyData";
 import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
+import { DataDriven } from "./DataDriven";
 import { VideoInReact } from "./VideoInReact";
 import { IntroducingRemotion } from "./IntroducingRemotion";
 import { ProgrammaticVideo } from "./ProgrammaticVideo";
+import { LikeAndSubscribe } from "./LikeAndSubscribe";
+import { CheckOnGithub } from "./CheckOnGithub/Github";
 
 const audio = staticFile("/audio.wav");
 const video = staticFile("/videos/video.mov");
@@ -60,6 +63,15 @@ export const Remotion = () => {
         <HdTo4k>
           <WeatherMap />
         </HdTo4k>
+      </Sequence>
+      <Sequence from={1450} durationInFrames={200}>
+        <DataDriven />
+      </Sequence>
+      <Sequence from={1650} durationInFrames={50}>
+        <LikeAndSubscribe />
+      </Sequence>
+      <Sequence from={1700} durationInFrames={50}>
+        <CheckOnGithub />
       </Sequence>
       <Audio src={audio} />
     </>

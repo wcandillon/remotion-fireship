@@ -11,5 +11,16 @@ if (typeof window !== "undefined" && "FontFace" in window) {
     continueRender(handle);
   });
 }
+if (typeof window !== "undefined" && "FontFace" in window) {
+  const font = new FontFace(
+    "Cubano",
+    "url(" + staticFile("/fonts/Cubano.woff") + ") format('woff')"
+  );
+  const handle = delayRender();
+  font.load().then(() => {
+    document.fonts.add(font);
+    continueRender(handle);
+  });
+}
 
 export const getFont = () => null;
