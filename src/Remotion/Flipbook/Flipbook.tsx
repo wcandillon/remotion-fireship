@@ -16,11 +16,13 @@ export const Flipbook = () => {
     [0, 1],
     EASE_CLAMP
   );
-  const offset = interpolate(
-    frame,
-    [PAGES * duration + 90, PAGES * duration + 150],
-    [0, 4],
-    EASE_CLAMP
+  const offset = Math.round(
+    interpolate(
+      frame,
+      [PAGES * duration + 90, PAGES * duration + 150],
+      [0, 7],
+      EASE_CLAMP
+    )
   );
   return (
     <div>
@@ -39,7 +41,7 @@ export const Flipbook = () => {
               index={index}
               overlay={overlay}
               offset={offset}
-              frame={overlay < 1 ? index : index + frame - overlayStart - 15}
+              frame={overlay < 1 ? index : index + offset}
             />
           </g>
         ))}

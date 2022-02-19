@@ -55,7 +55,7 @@ export const Reactive = () => {
   const frame = useCurrentFrame();
   const world = typeWriter(
     ", World!",
-    interpolate(frame, [0, 15], [0, 1], EASE_CLAMP)
+    interpolate(frame, [15, 30], [0, 1], EASE_CLAMP)
   );
   const colorProgress = interpolate(frame, [25, 65], [0, 1], EASE_CLAMP);
   const color = typeString(colorProgress);

@@ -22,7 +22,7 @@ export const Page = ({ index, overlay, offset, frame }: PageProps) => {
   const PADDING = mix(overlay, 75, 0);
   const startX = (index % COLS) * startWidth + PADDING;
   const startY = Math.floor(index / COLS) * startHeight + PADDING;
-  const progress = 0.3 + index / PAGES + offset;
+  const progress = 0.3 + index / PAGES + offset / 4;
   const x = mix(overlay, startX, 0);
   const y = mix(overlay, startY, 0);
   const width = mix(overlay, startWidth, CANVAS.width);
