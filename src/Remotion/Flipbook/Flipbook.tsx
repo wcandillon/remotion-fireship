@@ -19,8 +19,8 @@ export const Flipbook = () => {
   const offset = Math.round(
     interpolate(
       frame,
-      [PAGES * duration + 90, PAGES * duration + 150],
-      [0, 7],
+      [PAGES * duration + 90, PAGES * duration + 130],
+      [0, 6],
       EASE_CLAMP
     )
   );

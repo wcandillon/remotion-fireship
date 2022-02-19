@@ -19,7 +19,7 @@ export const RemotionLogo = ({ progress }: RemotionLogoProps) => {
         alignItems: "center",
         flexDirection: "row",
         opacity: progress,
-        transform: [{ translateY: mix(progress, 200, 0) }],
+        transform: [{ translateY: mix(progress, -200, 0) }],
       }}
     >
       <Img
