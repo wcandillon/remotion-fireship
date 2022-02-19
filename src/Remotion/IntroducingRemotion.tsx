@@ -1,54 +1,68 @@
 import { Text, View, StyleSheet } from "react-native";
-import {
-  Img,
-  staticFile,
-  useCurrentFrame,
-  interpolate,
-  AbsoluteFill,
-} from "remotion";
+import { Img, staticFile, useCurrentFrame, interpolate } from "remotion";
 
 import { BG_COLOR2 } from "./helpers/colors";
 import { CANVAS } from "./components/Canvas";
-import { EASE_CLAMP, interpolateVector, mix } from "./components/Animations";
+import { EASE_CLAMP, mix } from "./components/Animations";
 
 const LOGO_WIDTH = 800;
 const LOGO_HEIGHT = 800;
+const TITLE_WIDTH = 1756;
 const { center } = CANVAS;
+const logoSrcX = center.x - LOGO_WIDTH / 2;
+const logoDstX = 574;
+const titleSrcX = center.x - TITLE_WIDTH;
+const titleDstX = 1510;
 
 export const IntroducingRemotion = () => {
   const frame = useCurrentFrame();
-  const progress = interpolate(frame, [0, 30], [0, 1], EASE_CLAMP);
-  const logoX = mix(progress, 950, 0);
-  const titleX = mix(progress, -1050, 0);
+  const progress = interpolate(frame, [0, 15], [0, 1], EASE_CLAMP);
   return (
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: BG_COLOR2,
-        flexDirection: "row",
       }}
     >
-      <View style={{ transform: [{ translateX: logoX }] }}>
+      <View
+        style={{
+          ...StyleSheet.absoluteFillObject,
+          justifyContent: "center",
+          transform: [{ translateX: mix(progress, titleSrcX, titleDstX) }],
+        }}
+      >
+        <Text
+          style={{
+            marginLeft: 128,
+            fontFamily: "SF Pro",
+            color: "white",
+            fontSize: 400,
+            fontWeight: "700",
+          }}
+        >
+          Remotion
+        </Text>
+      </View>
+      <View
+        style={{
+          ...StyleSheet.absoluteFillObject,
+          backgroundColor: BG_COLOR2,
+          width: center.x,
+          transform: [{ translateX: mix(progress, 0, -logoDstX) }],
+        }}
+      />
+      <View
+        style={{
+          ...StyleSheet.absoluteFillObject,
+          justifyContent: "center",
+          transform: [{ translateX: mix(progress, logoSrcX, logoDstX) }],
+        }}
+      >
         <Img
           src={staticFile("/images/logo.png")}
           style={{ width: LOGO_WIDTH, height: LOGO_HEIGHT }}
         />
       </View>
-      <Text
-        style={{
-          transform: [{ translateX: titleX }],
-          marginLeft: 128,
-          fontFamily:
-            "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif",
-          color: "white",
-          fontSize: 400,
-          fontWeight: "700",
-        }}
-      >
-        Remotion
-      </Text>
     </View>
   );
 };
