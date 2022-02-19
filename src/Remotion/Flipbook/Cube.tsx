@@ -97,7 +97,7 @@ export const Cube = ({ size, transform, center, strokeWidth }: CubeProps) => {
             fill="transparent"
             strokeWidth={strokeWidth}
             strokeLinejoin="round"
-            stroke="url(#s1)"
+            stroke="#61DAFB"
           />
         );
       })}

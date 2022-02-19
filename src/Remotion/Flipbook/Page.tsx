@@ -15,9 +15,10 @@ interface PageProps {
   index: number;
   overlay: number;
   offset: number;
+  frame: number;
 }
 
-export const Page = ({ index, overlay, offset }: PageProps) => {
+export const Page = ({ index, overlay, offset, frame }: PageProps) => {
   const PADDING = mix(overlay, 75, 0);
   const startX = (index % COLS) * startWidth + PADDING;
   const startY = Math.floor(index / COLS) * startHeight + PADDING;
@@ -28,6 +29,9 @@ export const Page = ({ index, overlay, offset }: PageProps) => {
   const height = mix(overlay, startHeight, CANVAS.height);
   const size = mix(overlay, 300, 900);
   const center = { x: width / 2 - PADDING, y: height / 2 - PADDING };
+  const textX = mix(overlay, 650, 650 * 4);
+  const textY = mix(overlay, 150, 600);
+  const fontSize = mix(overlay, 150, 600);
   return (
     <g transform={`translate(${x}, ${y})`}>
       <rect
@@ -36,9 +40,6 @@ export const Page = ({ index, overlay, offset }: PageProps) => {
         width={width - 2 * PADDING}
         height={height - 2 * PADDING}
         fill={BG_COLOR3}
-        stroke="black"
-        strokeWidth={STROKE_WIDTH}
-        strokeLinejoin="round"
         rx={25}
       />
       <Cube
@@ -54,11 +55,11 @@ export const Page = ({ index, overlay, offset }: PageProps) => {
         fontFamily="Rubik"
         fontWeight="500"
         fill="white"
-        fontSize={150}
-        y={150}
-        x={650}
+        fontSize={fontSize}
+        y={textY}
+        x={textX}
       >
-        {index}
+        {frame}
       </text>
     </g>
   );
