@@ -21,6 +21,8 @@ import { IntroducingRemotion } from "./IntroducingRemotion";
 import { LikeAndSubscribe } from "./LikeAndSubscribe";
 import { CheckOnGithub } from "./CheckOnGithub/Github";
 import { MadeDifferent } from "./components/MadeDifferent";
+import { RemotionWebsite } from "./components/RemotionWebsite";
+import { DevTools } from "./components/DevTools";
 
 const audio = staticFile("/audio.wav");
 const flipbook = staticFile("/videos/flipbook.mov");
@@ -36,13 +38,16 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={120}>
           <UsingJavaScript />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={150}>
-          <Video src={staticFile("videos/with-javascript-short.mp4")} />
+        <Series.Sequence durationInFrames={68}>
+          <DevTools />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={120}>
-          <Video src={usingRemotion} />
+        <Series.Sequence durationInFrames={92}>
+          <RemotionWebsite />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
+          <Video src={usingRemotion} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
           <Video src={flipbook} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={180}>
