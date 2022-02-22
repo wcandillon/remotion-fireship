@@ -21,8 +21,8 @@ import { IntroducingRemotion } from "./IntroducingRemotion";
 import { LikeAndSubscribe } from "./LikeAndSubscribe";
 import { CheckOnGithub } from "./CheckOnGithub/Github";
 import { MadeDifferent } from "./components/MadeDifferent";
-import { RemotionWebsite } from "./components/RemotionWebsite";
 import { DevTools } from "./components/DevTools";
+import { VideoMadeInReact } from "./VideoMadeInReact";
 
 const audio = staticFile("/audio.wav");
 const flipbook = staticFile("/videos/flipbook.mov");
@@ -42,7 +42,7 @@ export const Remotion = () => {
           <DevTools />
         </Series.Sequence>
         <Series.Sequence durationInFrames={92}>
-          <RemotionWebsite />
+          <VideoMadeInReact />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
           <Video src={usingRemotion} />

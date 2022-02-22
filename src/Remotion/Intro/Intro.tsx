@@ -32,7 +32,6 @@ const Text = styled.span`
 
 export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const { fps, width, height } = useVideoConfig();
-  console.log({ frame });
   const scaleProgress = spring({
     fps,
     frame: frame,
@@ -44,7 +43,7 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const scale = interpolate(scaleProgress, [0, 1], [2, 1.5]);
   const spring1 = spring({
     fps,
-    frame: frame - 30,
+    frame: frame,
     config: {
       stiffness: 100,
       damping: 200,
@@ -52,7 +51,7 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
   });
   const spring2 = spring({
     fps,
-    frame: frame - 60,
+    frame: frame - 10,
     config: {
       stiffness: 100,
       damping: 200,
@@ -79,15 +78,17 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const arcs = (
     <>
       <Arc rotation={0 + 30} frame={frame} />
-      <Arc rotation={120 + 30} frame={frame - 30} />
-      <Arc rotation={240 + 30} frame={frame - 60} />
+      <Arc rotation={120 + 30} frame={frame - 15} />
+      <Arc rotation={240 + 30} frame={frame - 30} />
     </>
   );
 
   const opacity = 1;
 
   return (
-    <Container style={{ transform: `scale(${scale})`, opacity }}>
+    <Container
+      style={{ transform: `scale(${scale})`, opacity, background: "#F7F5E9" }}
+    >
       <ZIndex1>{text}</ZIndex1>
       <svg
         style={{
