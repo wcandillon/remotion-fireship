@@ -1,4 +1,11 @@
-import { Audio, Sequence, Series, staticFile, Video } from "remotion";
+import {
+  AbsoluteFill,
+  Audio,
+  Sequence,
+  Series,
+  staticFile,
+  Video,
+} from "remotion";
 
 import { WeatherMap } from "./components/WeatherMap/WeatherMap";
 import { Flipbook } from "./Flipbook";
@@ -26,8 +33,11 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={70}>
           <MadeDifferent />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={270}>
+        <Series.Sequence durationInFrames={120}>
           <UsingJavaScript />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={150}>
+          <Video src={staticFile("videos/with-javascript-short.mp4")} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={120}>
           <Video src={usingRemotion} />

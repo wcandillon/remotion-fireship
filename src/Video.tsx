@@ -4,6 +4,8 @@ import { Remotion } from "./Remotion";
 import { CheckOnGithub } from "./Remotion/CheckOnGithub/Github";
 import { CANVAS } from "./Remotion/components/Canvas";
 import { MadeDifferent as MadeDifferent } from "./Remotion/components/MadeDifferent";
+import { ThrowOut } from "./Remotion/components/ThrowOut";
+import { ThrowOutZoomed } from "./Remotion/components/ThrowOut/Zoomed";
 import { CloudyMap } from "./Remotion/components/WeatherMap/CloudyMap";
 import { Explosion } from "./Remotion/components/WeatherMap/Explosion";
 import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
@@ -113,6 +115,22 @@ export const RemotionVideo = () => {
       <Composition
         id="MadeDifferent"
         component={MadeDifferent}
+        durationInFrames={200}
+        fps={fps}
+        width={width}
+        height={height}
+      />
+      <Composition
+        id="ThrowOut"
+        component={ThrowOut}
+        durationInFrames={200}
+        fps={fps}
+        width={1246}
+        height={528}
+      />
+      <Composition
+        id="ThrowOutZoomed"
+        component={ThrowOutZoomed}
         durationInFrames={200}
         fps={fps}
         width={width}
