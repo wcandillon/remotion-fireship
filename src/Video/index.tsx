@@ -1,11 +1,4 @@
-import {
-  AbsoluteFill,
-  Audio,
-  Sequence,
-  Series,
-  staticFile,
-  Video,
-} from "remotion";
+import { Audio, Sequence, Series, staticFile, Video } from "remotion";
 
 import { WeatherMap } from "./components/WeatherMap/WeatherMap";
 import { Flipbook } from "./Flipbook";

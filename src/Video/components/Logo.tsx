@@ -1,6 +1,5 @@
 import { View } from "react-native";
 import { interpolate, useCurrentFrame } from "remotion";
-/* eslint-disable max-len */
 const aspectRatio = 21 / 23;
 const width = 1080;
 const height = width * aspectRatio;

@@ -1,20 +1,20 @@
 import { Composition } from "remotion";
 
-import { Remotion } from "./Remotion";
-import { CheckOnGithub } from "./Remotion/CheckOnGithub/Github";
-import { CANVAS } from "./Remotion/components/Canvas";
-import { MadeDifferent as MadeDifferent } from "./Remotion/components/MadeDifferent";
-import { ThrowOut } from "./Remotion/components/ThrowOut";
-import { ThrowOutZoomed } from "./Remotion/components/ThrowOut/Zoomed";
-import { CloudyMap } from "./Remotion/components/WeatherMap/CloudyMap";
-import { Explosion } from "./Remotion/components/WeatherMap/Explosion";
-import { RainMap } from "./Remotion/components/WeatherMap/RainMap";
-import { Thunderstorm } from "./Remotion/components/WeatherMap/Thunderstorm";
-import { ThunderstormMap } from "./Remotion/components/WeatherMap/ThunderstormMap";
-import { WeatherMap } from "./Remotion/components/WeatherMap/WeatherMap";
-import { DataDriven } from "./Remotion/DataDriven";
-import { LikeAndSubscribe } from "./Remotion/LikeAndSubscribe";
-import { StorifyData } from "./Remotion/StorifyData";
+import { Remotion } from "./Video/index";
+import { CheckOnGithub } from "./Video/CheckOnGithub/Github";
+import { CANVAS } from "./Video/components/Canvas";
+import { MadeDifferent as MadeDifferent } from "./Video/components/MadeDifferent";
+import { ThrowOut } from "./Video/components/ThrowOut";
+import { ThrowOutZoomed } from "./Video/components/ThrowOut/Zoomed";
+import { CloudyMap } from "./Video/components/WeatherMap/CloudyMap";
+import { Explosion } from "./Video/components/WeatherMap/Explosion";
+import { RainMap } from "./Video/components/WeatherMap/RainMap";
+import { Thunderstorm } from "./Video/components/WeatherMap/Thunderstorm";
+import { ThunderstormMap } from "./Video/components/WeatherMap/ThunderstormMap";
+import { WeatherMap } from "./Video/components/WeatherMap/WeatherMap";
+import { DataDriven } from "./Video/DataDriven";
+import { LikeAndSubscribe } from "./Video/LikeAndSubscribe";
+import { StorifyData } from "./Video/StorifyData";
 
 const { width, height } = CANVAS;
 const fps = 30;

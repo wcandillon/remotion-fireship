@@ -2,7 +2,6 @@ import React from "react";
 import {
   AbsoluteFill,
   interpolate,
-  interpolateColors,
   spring,
   useCurrentFrame,
   useVideoConfig,
