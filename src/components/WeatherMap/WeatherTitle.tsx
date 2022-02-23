@@ -9,7 +9,8 @@ getFont();
 
 export const WeatherTitle: React.FC<{
   type: WeatherType;
-}> = ({ type }) => {
+  temperature?: number;
+}> = ({ type, temperature }) => {
   const frame = useCurrentFrame();
   const label = useMemo(() => {
     if (type === "clouds") {
@@ -67,6 +68,23 @@ export const WeatherTitle: React.FC<{
       >
         {label}
       </h1>
+      {temperature && (
+        <h4
+          style={{
+            fontFamily: "PressStart",
+            color,
+            textAlign: "center",
+            fontSize: 50,
+            lineHeight: 1.3,
+            position: "absolute",
+            bottom: 0,
+            opacity,
+            margin: 75,
+          }}
+        >
+          {`Temperature: ${temperature}°C`}
+        </h4>
+      )}
     </AbsoluteFill>
   );
 };
