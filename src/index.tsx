@@ -1,8 +1,7 @@
 import { registerRoot } from "remotion";
 
-//import { RemotionVideo } from "./Video";
-import { Tutorial } from "./Tutorial";
+import { RemotionVideo } from "./Video";
 
 import "./font.css";
 
-registerRoot(Tutorial);
+registerRoot(RemotionVideo);
