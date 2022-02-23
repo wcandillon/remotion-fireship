@@ -1,5 +1,5 @@
-import { View } from "react-native";
+import { WeatherMap } from "./WeatherMap";
 
 export const Story = () => {
-  return <View style={{ flex: 1, backgroundColor: "red" }} />;
+  return <WeatherMap type="clouds" temperature={40} />;
 };

@@ -3,10 +3,12 @@ import { AbsoluteFill, useCurrentFrame } from "remotion";
 
 import { getFont } from "../../Video/helpers/load-font";
 
+import type { WeatherType } from "./WeatherType";
+
 getFont();
 
 export const WeatherTitle: React.FC<{
-  type: "clouds" | "rain" | "thunderstorm";
+  type: WeatherType;
 }> = ({ type }) => {
   const frame = useCurrentFrame();
   const label = useMemo(() => {
