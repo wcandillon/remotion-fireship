@@ -1,6 +1,7 @@
 import { Audio, Sequence, Series, staticFile, Video } from "remotion";
 
-import { WeatherMap } from "./components/WeatherMap/WeatherMap";
+import { WeatherMap } from "../components/WeatherMap/WeatherMap";
+
 import { Flipbook } from "./Flipbook";
 import { HdTo4k } from "./helpers/hd-to-4k";
 import { UsingJavaScript } from "./UsingJavaScript";

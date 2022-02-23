@@ -1,13 +1,16 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 
-import { getFont } from "../../helpers/load-font";
+import { getFont } from "../../Video/helpers/load-font";
+
+import type { WeatherType } from "./WeatherType";
 
 getFont();
 
 export const WeatherTitle: React.FC<{
-  type: "clouds" | "rain" | "thunderstorm";
-}> = ({ type }) => {
+  type: WeatherType;
+  temperature?: number;
+}> = ({ type, temperature }) => {
   const frame = useCurrentFrame();
   const label = useMemo(() => {
     if (type === "clouds") {
@@ -65,6 +68,23 @@ export const WeatherTitle: React.FC<{
       >
         {label}
       </h1>
+      {temperature && (
+        <h4
+          style={{
+            fontFamily: "PressStart",
+            color,
+            textAlign: "center",
+            fontSize: 50,
+            lineHeight: 1.3,
+            position: "absolute",
+            bottom: 0,
+            opacity,
+            margin: 75,
+          }}
+        >
+          {`Temperature: ${temperature}°C`}
+        </h4>
+      )}
     </AbsoluteFill>
   );
 };

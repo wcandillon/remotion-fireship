@@ -3,9 +3,9 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { AbsoluteFill, Series } from "remotion";
 
-import { BG_COLOR } from "../../helpers/colors";
-import { CANVAS } from "../Canvas";
-import { Code } from "../Code";
+import { BG_COLOR } from "../../Video/helpers/colors";
+import { CANVAS } from "../../Video/components/Canvas";
+import { Code } from "../../Video/components/Code";
 
 import { CloudyMap } from "./CloudyMap";
 import { RainMap } from "./RainMap";
