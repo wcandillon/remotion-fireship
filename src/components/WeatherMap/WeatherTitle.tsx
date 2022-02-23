@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 
-import { getFont } from "../../helpers/load-font";
+import { getFont } from "../../Video/helpers/load-font";
 
 getFont();
 
