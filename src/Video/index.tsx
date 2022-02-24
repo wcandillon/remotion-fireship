@@ -62,7 +62,7 @@ export const Remotion = () => {
           </HdTo4k>
         </Series.Sequence>
       </Series>
-      <Sequence from={1070} durationInFrames={90}>
+      <Sequence from={1080} durationInFrames={80}>
         <WeatherAPI />
       </Sequence>
       <Sequence from={1160} durationInFrames={90}>

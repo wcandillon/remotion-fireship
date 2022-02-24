@@ -2,7 +2,6 @@ import { Text, View } from "react-native";
 import { interpolate, useCurrentFrame } from "remotion";
 
 import { EASE_CLAMP } from "./components/Animations";
-import { CANVAS } from "./components/Canvas";
 import { Code } from "./components/Code";
 import { Logo } from "./components/Logo";
 import { BG_COLOR } from "./helpers/colors";

@@ -15,7 +15,7 @@ export const WeatherAPI: React.FC = () => {
     >
       <Code
         fontSize={110}
-        source={`const res = fetch("https://bestweatherapi.com/v1");
+        source={`const res = fetch("thebestweatherapi.com/v1");
 const weather = await res.json();
 setWeather(weather);`}
       />
