@@ -48,8 +48,6 @@ const validColor = (color: string) => {
 
 const { center } = CANVAS;
 const PADDING = 200;
-const height = 800;
-const width = center.x - PADDING;
 
 export const Reactive = () => {
   const frame = useCurrentFrame();
@@ -72,11 +70,10 @@ export const Reactive = () => {
           flex: 1,
           justifyContent: "center",
           alignItems: "center",
+          display: "flex",
         }}
       >
-        <View style={{ height, width }}>
-          <Code source={source} />
-        </View>
+        <Code source={source} />
       </View>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <View>
@@ -87,7 +84,7 @@ export const Reactive = () => {
               color: validColor(color),
               textAlign: "center",
               marginTop: 64,
-              fontFamily: "Rubik-Medium",
+              fontFamily: "Rubik",
             }}
           >
             {text}
