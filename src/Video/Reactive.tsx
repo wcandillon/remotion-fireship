@@ -5,6 +5,7 @@ import { EASE_CLAMP } from "./components/Animations";
 import { CANVAS } from "./components/Canvas";
 import { Code } from "./components/Code";
 import { Logo } from "./components/Logo";
+import { BG_COLOR } from "./helpers/colors";
 
 export const typeWriter = (text: string, progress: number) => {
   const letters = text.split("");
@@ -21,33 +22,9 @@ export const typeWriter = (text: string, progress: number) => {
 };
 
 const typeString = (progress: number) => {
-  const delta = 1 / "cyanmagenta".length;
-  const states = [
-    "cyan",
-    "cya",
-    "cy",
-    "c",
-    "",
-    "m",
-    "ma",
-    "mag",
-    "mage",
-    "magen",
-    "magent",
-    "magenta",
-  ];
-  return states[Math.floor(progress / delta)];
+  const states = ["powderblue", "hotpink", "palegreen"];
+  return states[Math.round(progress * (states.length - 1))];
 };
-
-const validColor = (color: string) => {
-  if (color === "magenta") {
-    return "deeppink";
-  }
-  return "#61DAFB";
-};
-
-const { center } = CANVAS;
-const PADDING = 200;
 
 export const Reactive = () => {
   const frame = useCurrentFrame();
@@ -55,7 +32,7 @@ export const Reactive = () => {
     ", World!",
     interpolate(frame, [15, 30], [0, 1], EASE_CLAMP)
   );
-  const colorProgress = interpolate(frame, [25, 65], [0, 1], EASE_CLAMP);
+  const colorProgress = interpolate(frame, [35, 65], [0, 1], EASE_CLAMP);
   const color = typeString(colorProgress);
   const text = `Hello${world}`;
   const source = `<HelloWorld
@@ -64,7 +41,7 @@ export const Reactive = () => {
 />`;
 
   return (
-    <View style={{ flex: 1, flexDirection: "row", backgroundColor: "#16181D" }}>
+    <View style={{ flex: 1, flexDirection: "row", backgroundColor: BG_COLOR }}>
       <View
         style={{
           flex: 1,
@@ -73,15 +50,17 @@ export const Reactive = () => {
           display: "flex",
         }}
       >
-        <Code source={source} />
+        <View style={{ paddingLeft: 120 }}>
+          <Code source={source} />
+        </View>
       </View>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <View>
-          <Logo color={validColor(color)} />
+          <Logo color={color} />
           <Text
             style={{
               fontSize: 200,
-              color: validColor(color),
+              color: color,
               textAlign: "center",
               marginTop: 64,
               fontFamily: "Rubik",

@@ -49,6 +49,8 @@ export const Code = ({ source, fontSize }: CodeProps) => {
           borderBottomLeftRadius: 25,
           borderBottomRightRadius: 25,
           backgroundColor: theme.plain.backgroundColor,
+          minWidth: 1800,
+          display: "flex",
         }}
       >
         <Highlight {...defaultProps} code={source} language="jsx" theme={theme}>
