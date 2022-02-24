@@ -31,7 +31,7 @@ export const CheckOnGithub: React.FC = () => {
       }}
     >
       <Series>
-        <Series.Sequence durationInFrames={20}>
+        <Series.Sequence durationInFrames={15}>
           <AbsoluteFill
             style={{
               justifyContent: "center",
@@ -50,11 +50,11 @@ export const CheckOnGithub: React.FC = () => {
               alignItems: "center",
             }}
           >
-            <h1 style={{ marginTop: 40, marginBottom: 40 }}>
-              Fork, clone and change this video on GitHub!
+            <h1 style={{ marginTop: 40, marginBottom: 40, color: "purple" }}>
+              clone and EDIT this video on GitHub!
             </h1>
             <h1 style={{ marginTop: 40, marginBottom: 40 }}>
-              Link in Description!
+              github.com/wcandillon/remotion-fireship
             </h1>
           </AbsoluteFill>
         </Series.Sequence>

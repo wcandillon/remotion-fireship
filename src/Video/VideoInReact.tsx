@@ -7,8 +7,9 @@ import { BG_COLOR2 } from "./helpers/colors";
 export const VideoInReact = () => {
   const frame = useCurrentFrame();
   const source = `const MyVideo = () => {
-  const frame = useCurrentFrame(); // ${1000 + frame}
-  return <VideoContent />;
+  const frame = useCurrentFrame(); // ${frame}
+
+  // TODO: Draw something
 }`;
   return (
     <View
