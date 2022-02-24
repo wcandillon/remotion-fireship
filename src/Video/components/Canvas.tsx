@@ -27,7 +27,16 @@ export const Canvas = ({ children, color }: CanvasProps) => {
         <stop offset="0%" stopColor="#47A5EB" />
         <stop offset="100%" stopColor="#89DEBB" />
       </linearGradient>
-      {color ?? <rect x={0} y={0} width={width} height={height} fill={color} />}
+      {color ?? (
+        <rect
+          x={0}
+          y={0}
+          width={width}
+          stroke="none"
+          height={height}
+          fill={color}
+        />
+      )}
       {children}
     </svg>
   );
