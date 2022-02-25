@@ -19,7 +19,7 @@ export const Arc: FC<{
     },
   });
 
-  const opacity = interpolate(progress, [0, 0.2], [0, 0.7], {
+  const opacity = interpolate(progress, [0, 0.2], [0, 1], {
     extrapolateRight: "clamp",
     extrapolateLeft: "clamp",
   });

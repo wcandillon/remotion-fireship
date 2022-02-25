@@ -27,8 +27,7 @@ const ZIndex1 = styled.div`
 `;
 
 const Text = styled.span`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Cubano;
   font-size: 180px;
   font-weight: 700;
 `;
@@ -99,7 +98,6 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
         color: "white",
       }}
     >
-      <ZIndex1>{text}</ZIndex1>
       <svg
         style={{
           width,
@@ -110,8 +108,8 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
       >
         <defs>
           <linearGradient id="lg">
-            <stop stopColor="#4290f5" offset="0" />
-            <stop stopColor="#42e9f5" offset="1" />
+            <stop stopColor="#326cb8" offset="0" />
+            <stop stopColor="#2fa8b1" offset="1" />
           </linearGradient>
           <mask id="mask">{arcs}</mask>
         </defs>
