@@ -24,9 +24,10 @@ const Circle = ({ color }: CircleProps) => (
 interface CodeProps {
   source: string;
   fontSize: number;
+  minWidth: number;
 }
 
-export const Code = ({ source, fontSize }: CodeProps) => {
+export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
   return (
     <View>
       <View
@@ -49,7 +50,7 @@ export const Code = ({ source, fontSize }: CodeProps) => {
           borderBottomLeftRadius: 25,
           borderBottomRightRadius: 25,
           backgroundColor: theme.plain.backgroundColor,
-          minWidth: 1800,
+          minWidth,
           display: "flex",
         }}
       >

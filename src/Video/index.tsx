@@ -1,4 +1,4 @@
-import { Audio, Sequence, Series, staticFile, Video } from "remotion";
+import { Audio, Sequence, Series, staticFile } from "remotion";
 
 import { WeatherMap } from "../components/WeatherMap/WeatherMap";
 

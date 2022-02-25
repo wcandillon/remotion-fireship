@@ -1,6 +1,4 @@
-import { first } from "lodash";
 import type { FC } from "react";
-import { useState } from "react";
 import { AbsoluteFill, interpolate, spring, useVideoConfig } from "remotion";
 import styled from "styled-components";
 

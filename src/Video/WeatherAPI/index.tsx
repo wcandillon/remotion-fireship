@@ -14,6 +14,7 @@ export const WeatherAPI: React.FC = () => {
       }}
     >
       <Code
+        minWidth={1800}
         fontSize={110}
         source={`const res = fetch("thebestweatherapi.com/v1");
 const weather = await res.json();

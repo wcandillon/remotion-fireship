@@ -62,6 +62,7 @@ export const WeatherMap: React.FC = () => {
           <Container>
             <RainMap />
             <Code
+              minWidth={1800}
               fontSize={110}
               source={`const Rain = () => {
   return (
@@ -75,6 +76,7 @@ export const WeatherMap: React.FC = () => {
           <Container>
             <CloudyMap />
             <Code
+              minWidth={1800}
               fontSize={110}
               source={`const Cloudy = () => {
   return (
@@ -88,6 +90,7 @@ export const WeatherMap: React.FC = () => {
           <Container>
             <ThunderstormMap />
             <Code
+              minWidth={1800}
               fontSize={110}
               source={`const Tornado = () => {
   return (

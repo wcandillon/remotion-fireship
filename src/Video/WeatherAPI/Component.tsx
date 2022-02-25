@@ -15,6 +15,7 @@ export const Component: React.FC = () => {
       }}
     >
       <Code
+        minWidth={1800}
         source={`<AbsoluteFill>
   <Map />
   {weather.condition === "sunny" ? (

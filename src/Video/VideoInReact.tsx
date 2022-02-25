@@ -20,7 +20,7 @@ export const VideoInReact = () => {
         backgroundColor: BG_COLOR2,
       }}
     >
-      <Code source={source} />
+      <Code minWidth={3200} source={source} />
     </View>
   );
 };
