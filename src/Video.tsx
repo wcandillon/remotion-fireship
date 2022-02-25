@@ -7,7 +7,6 @@ import { MadeDifferent as MadeDifferent } from "./Video/components/MadeDifferent
 import { ThrowOut } from "./Video/components/ThrowOut";
 import { ThrowOutZoomed } from "./Video/components/ThrowOut/Zoomed";
 import { CloudyMap } from "./components/WeatherMap/CloudyMap";
-import { Explosion } from "./components/WeatherMap/Explosion";
 import { RainMap } from "./components/WeatherMap/RainMap";
 import { Thunderstorm } from "./components/WeatherMap/Thunderstorm";
 import { ThunderstormMap } from "./components/WeatherMap/ThunderstormMap";

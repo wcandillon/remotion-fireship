@@ -17,14 +17,14 @@ export const Cloud: React.FC<
     },
   });
 
-  const translateY = interpolate(entry, [0, 1], [1600, 0]);
+  const translateX = interpolate(entry, [0, 1], [800, 0]);
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style={{
         ...style,
-        transform: `translateY(${translateY}px)`,
+        transform: `translateX(${translateX}px)`,
         position: "absolute",
         width: 250,
       }}

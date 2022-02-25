@@ -19,7 +19,7 @@ export const RainDrop: React.FC<{
     },
   });
 
-  const top = interpolate(drop, [0, 1], [-0.2, 1.02]);
+  const top = interpolate(drop, [0, 1], [-0.2, 1.1]);
 
   return (
     <svg
