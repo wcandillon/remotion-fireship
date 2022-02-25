@@ -9,6 +9,8 @@ import {
   useVideoConfig,
 } from "remotion";
 
+import { Stoplights } from "./Stoplights";
+
 export const Player: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -44,17 +46,27 @@ export const Player: React.FC = () => {
         <div
           style={{
             display: "flex",
+            flexDirection: "row",
             justifyContent: "center",
-            alignItems: "center",
-            height: 60,
-            backgroundColor: "#000",
-            color: "white",
-            fontFamily: "Helvetica",
-            fontSize: 27,
-            lineHeight: "1em",
           }}
         >
-          news.mp4
+          <Stoplights />
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              height: 60,
+              backgroundColor: "#000",
+              color: "white",
+              fontFamily: "Helvetica",
+              fontSize: 27,
+              lineHeight: "1em",
+            }}
+          >
+            news.mp4
+          </div>
         </div>
         <div
           style={{
