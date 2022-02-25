@@ -26,7 +26,7 @@ export const DataDriven: React.FC<{
   const remappedFrame = remapSpeed({
     frame,
     speed: (fr) =>
-      interpolate(fr, [0, 50, 90], [0, 0, 4], {
+      interpolate(fr, [0, 100, 140], [0, 0, 4], {
         extrapolateRight: "clamp",
       }),
   });
@@ -42,7 +42,7 @@ export const DataDriven: React.FC<{
 
   const iconScale = spring({
     fps,
-    frame: frame - 100,
+    frame: frame - 150,
     config: {
       damping: 200,
     },
@@ -55,6 +55,9 @@ export const DataDriven: React.FC<{
       }}
     >
       {files.map((file, i) => {
+        if (frame < i * 12) {
+          return null;
+        }
         const x =
           radius *
           Math.sin((i / files.length) * Math.PI * 2 + Math.PI * 1.5 + rotation);
