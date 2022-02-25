@@ -8,10 +8,7 @@ import {
 } from "remotion";
 
 import { BG_COLOR2 } from "../helpers/colors";
-import { getFont } from "../helpers/load-font";
 import { typeWriter } from "../Reactive";
-
-getFont();
 
 export const CheckOnGithub: React.FC = () => {
   const { fps } = useVideoConfig();

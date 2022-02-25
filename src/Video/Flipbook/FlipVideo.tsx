@@ -9,11 +9,8 @@ import {
 } from "remotion";
 
 import { BG_COLOR2 } from "../helpers/colors";
-import { getFont } from "../helpers/load-font";
 
 const flipbook = staticFile("/videos/flipbook.mov");
-
-getFont();
 
 export const FlipVideo: React.FC = () => {
   const { fps } = useVideoConfig();

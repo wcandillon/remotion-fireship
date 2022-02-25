@@ -16,11 +16,14 @@ import { LikeAndSubscribe } from "./Video/LikeAndSubscribe";
 import { StorifyData } from "./Video/StorifyData";
 import { ZoomOutEditor } from "./Video/ZoomOutEditor";
 import { ToCodeEditor } from "./Video/ZoomOutEditor/ToCodeEditor";
+import { getFont } from "./Video/helpers/load-font";
 
 const { width, height } = CANVAS;
 const fps = 30;
 // the audio duration is 58seconds + 4 frames
 const durationInFrames = fps * 58 + 4;
+
+getFont();
 
 export const RemotionVideo = () => {
   return (

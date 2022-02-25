@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import { FakeDevTools } from "../FakeDevTools";
 import { BG_COLOR2 } from "../helpers/colors";
-import { getFont } from "../helpers/load-font";
 
 import { Arc } from "./Arc";
 import { MouseCursor } from "./MouseCursor";
@@ -34,8 +33,6 @@ const Text = styled.span`
   line-height: 1;
   white-space: pre;
 `;
-
-getFont();
 
 export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const { fps, width, height } = useVideoConfig();

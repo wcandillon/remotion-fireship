@@ -2,17 +2,6 @@ import { continueRender, delayRender, staticFile } from "remotion";
 
 if (typeof window !== "undefined" && "FontFace" in window) {
   const font = new FontFace(
-    "PressStart",
-    "url(" + staticFile("/fonts/PressStart.woff") + ") format('woff')"
-  );
-  const handle = delayRender();
-  font.load().then(() => {
-    document.fonts.add(font);
-    continueRender(handle);
-  });
-}
-if (typeof window !== "undefined" && "FontFace" in window) {
-  const font = new FontFace(
     "Cubano",
     "url(" + staticFile("/fonts/Cubano.woff") + ") format('woff')"
   );

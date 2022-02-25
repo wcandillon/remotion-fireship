@@ -1,11 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
 
-import { getFont } from "../helpers/load-font";
-
 import { Subscribe } from "./Subscribe";
-
-getFont();
 
 export const Like: React.FC = () => {
   return (

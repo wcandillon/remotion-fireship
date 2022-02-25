@@ -1,11 +1,7 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 
-import { getFont } from "../../Video/helpers/load-font";
-
 import type { WeatherType } from "./WeatherType";
-
-getFont();
 
 export const WeatherTitle: React.FC<{
   type: WeatherType;
