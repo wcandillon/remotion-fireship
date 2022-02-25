@@ -26,7 +26,7 @@ export const WeatherTitle: React.FC<{
   }, [type]);
   const size = useMemo(() => {
     if (type === "thunderstorm") {
-      return 90;
+      return 150;
     }
     return 150;
   }, [type]);
@@ -46,23 +46,24 @@ export const WeatherTitle: React.FC<{
     <AbsoluteFill>
       <h1
         style={{
-          fontFamily: "PressStart",
+          fontFamily: "Cubano",
           color: color,
           textAlign: "center",
-          fontSize: 50,
+          fontSize: 60,
           marginTop: 100,
+          lineHeight: 1,
         }}
       >
         Forecast:
       </h1>
       <h1
         style={{
-          fontFamily: "PressStart",
+          fontFamily: "Cubano",
           color,
           textAlign: "center",
           fontSize: size,
-          marginTop: 50,
-          lineHeight: 1.3,
+          marginTop: 0,
+          lineHeight: 1,
           opacity,
         }}
       >
@@ -71,7 +72,7 @@ export const WeatherTitle: React.FC<{
       {temperature && (
         <h4
           style={{
-            fontFamily: "PressStart",
+            fontFamily: "Cubano",
             color,
             textAlign: "center",
             fontSize: 50,

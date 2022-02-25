@@ -67,14 +67,6 @@ export const RemotionVideo = () => {
         height={1920}
       />
       <Composition
-        id="Explosion"
-        component={Explosion}
-        durationInFrames={durationInFrames}
-        fps={fps}
-        width={1080}
-        height={1920}
-      />
-      <Composition
         id="WeatherMap"
         component={WeatherMap}
         durationInFrames={durationInFrames}
