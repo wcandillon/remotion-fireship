@@ -57,9 +57,9 @@ export const MindExplode: React.FC = () => {
             random(\`color$\{i}$\{j}\`),
             [0, 1],
             ["white", "#eee"]
-            );
+          );
 
-            return (
+          return (
             <Dot
               centerX={centerX}
               color={color}
@@ -68,13 +68,13 @@ export const MindExplode: React.FC = () => {
               xPosNoise={xPosNoise}
               yPosNoise={yPosNoise}
               size={size}
-              />
-              );
-            });
-          }).flat(1)}
-          </AbsoluteFill>
+            />
           );
-        };`}
+        });
+      }).flat(1)}
+    </AbsoluteFill>
+  );
+};`}
         />
       </Container>
     </AbsoluteFill>
