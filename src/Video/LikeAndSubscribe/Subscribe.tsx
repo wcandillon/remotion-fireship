@@ -13,7 +13,7 @@ export const Subscribe: React.FC = () => {
         paddingBottom: 55,
         paddingLeft: 70,
         paddingRight: 70,
-        fontFamily: "Helvetica",
+        fontFamily: "Cubano",
         fontWeight: "bold",
         marginLeft: 100,
       }}
