@@ -5,11 +5,10 @@ import {
   interpolate,
   spring,
   staticFile,
-  useCurrentFrame,
   useVideoConfig,
 } from "remotion";
 
-import { BG_COLOR } from "../helpers/colors";
+import { BG_COLOR2 } from "../helpers/colors";
 
 import { remapSpeed } from "./remap-speed";
 
@@ -52,7 +51,7 @@ export const DataDriven: React.FC<{
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: BG_COLOR,
+        backgroundColor: BG_COLOR2,
       }}
     >
       {files.map((file, i) => {

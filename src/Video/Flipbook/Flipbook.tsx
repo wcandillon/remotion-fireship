@@ -2,7 +2,7 @@ import { useCurrentFrame, interpolate, AbsoluteFill } from "remotion";
 
 import { Canvas } from "../components/Canvas";
 import { EASE_CLAMP } from "../components/Animations";
-import { BG_COLOR } from "../helpers/colors";
+import { BG_COLOR2 } from "../helpers/colors";
 
 import { Page, PAGES } from "./Page";
 
@@ -26,8 +26,8 @@ export const Flipbook = () => {
     )
   );
   return (
-    <AbsoluteFill style={{ backgroundColor: BG_COLOR }}>
-      <Canvas color={BG_COLOR}>
+    <AbsoluteFill style={{ backgroundColor: BG_COLOR2 }}>
+      <Canvas color={BG_COLOR2}>
         {new Array(PAGES).fill(0).map((_, index) => (
           <g
             opacity={interpolate(

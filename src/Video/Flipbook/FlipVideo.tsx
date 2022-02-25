@@ -8,7 +8,7 @@ import {
   Video,
 } from "remotion";
 
-import { BG_COLOR } from "../helpers/colors";
+import { BG_COLOR2 } from "../helpers/colors";
 import { getFont } from "../helpers/load-font";
 
 const flipbook = staticFile("/videos/flipbook.mov");
@@ -55,7 +55,7 @@ export const FlipVideo: React.FC = () => {
             lineHeight: 1,
             borderRadius: 40,
             color: "white",
-            background: BG_COLOR,
+            background: BG_COLOR2,
             marginTop: 1200,
             transform: `scale(${scale})`,
           }}

@@ -1,6 +1,6 @@
 import { mix } from "../components/Animations";
 import { CANVAS } from "../components/Canvas";
-import { BG_COLOR3 } from "../helpers/colors";
+import { BG_COLOR2 } from "../helpers/colors";
 
 import { Cube } from "./Cube";
 
@@ -43,7 +43,7 @@ export const Page = ({ index, overlay, offset, frame }: PageProps) => {
         y={0}
         width={width}
         height={height}
-        fill={BG_COLOR3}
+        fill={BG_COLOR2}
         rx={25}
       />
       <Cube

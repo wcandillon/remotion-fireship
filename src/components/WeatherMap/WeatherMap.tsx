@@ -3,9 +3,9 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { AbsoluteFill, Series } from "remotion";
 
-import { BG_COLOR } from "../../Video/helpers/colors";
 import { CANVAS } from "../../Video/components/Canvas";
 import { Code } from "../../Video/components/Code";
+import { BG_COLOR2 } from "../../Video/helpers/colors";
 
 import { CloudyMap } from "./CloudyMap";
 import { RainMap } from "./RainMap";
@@ -56,7 +56,7 @@ const Container = ({ children }: ContainerProps) => {
 
 export const WeatherMap: React.FC = () => {
   return (
-    <AbsoluteFill style={{ backgroundColor: BG_COLOR }}>
+    <AbsoluteFill style={{ backgroundColor: BG_COLOR2 }}>
       <Series>
         <Series.Sequence durationInFrames={60}>
           <Container>

@@ -7,7 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 
-import { BG_COLOR } from "../../helpers/colors";
+import { BG_COLOR2 } from "../../helpers/colors";
 
 import { Thumbnail, videoThumbnails } from "./Thumbnail";
 import { YouTubeHeader } from "./YouTubeHeader";
@@ -53,7 +53,7 @@ const MadeDifferentInner: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: BG_COLOR,
+        backgroundColor: BG_COLOR2,
       }}
     >
       <br />

@@ -2,6 +2,9 @@ import type { FC } from "react";
 import { interpolate, spring, useVideoConfig } from "remotion";
 import styled from "styled-components";
 
+import { BG_COLOR2 } from "../helpers/colors";
+import { getFont } from "../helpers/load-font";
+
 import { Arc } from "./Arc";
 
 const Container = styled.div`
@@ -29,6 +32,8 @@ const Text = styled.span`
   font-size: 180px;
   font-weight: 700;
 `;
+
+getFont();
 
 export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const { fps, width, height } = useVideoConfig();
@@ -87,7 +92,12 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
 
   return (
     <Container
-      style={{ transform: `scale(${scale})`, opacity, background: "#F7F5E9" }}
+      style={{
+        transform: `scale(${scale})`,
+        opacity,
+        background: BG_COLOR2,
+        color: "white",
+      }}
     >
       <ZIndex1>{text}</ZIndex1>
       <svg
@@ -120,7 +130,9 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
               position: "absolute",
             }}
           >
-            <ZIndex1 style={{ color: "black" }}>{text}</ZIndex1>
+            <ZIndex1 style={{ color: "white", fontFamily: "Cubano" }}>
+              {text}
+            </ZIndex1>
           </foreignObject>
         </g>
       </svg>

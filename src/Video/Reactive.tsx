@@ -4,7 +4,7 @@ import { interpolate, useCurrentFrame } from "remotion";
 import { EASE_CLAMP } from "./components/Animations";
 import { Code } from "./components/Code";
 import { Logo } from "./components/Logo";
-import { BG_COLOR } from "./helpers/colors";
+import { BG_COLOR2 } from "./helpers/colors";
 
 export const typeWriter = (text: string, progress: number) => {
   const letters = text.split("");
@@ -40,7 +40,7 @@ export const Reactive = () => {
 />`;
 
   return (
-    <View style={{ flex: 1, flexDirection: "row", backgroundColor: BG_COLOR }}>
+    <View style={{ flex: 1, flexDirection: "row", backgroundColor: BG_COLOR2 }}>
       <View
         style={{
           flex: 1,

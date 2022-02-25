@@ -1,13 +1,13 @@
 import React from "react";
 
-import { BG_COLOR } from "../helpers/colors";
+import { BG_COLOR2 } from "../helpers/colors";
 
 export const Subscribe: React.FC = () => {
   return (
     <div
       style={{
         backgroundColor: "white",
-        color: BG_COLOR,
+        color: BG_COLOR2,
         borderRadius: 40,
         paddingTop: 55,
         paddingBottom: 55,

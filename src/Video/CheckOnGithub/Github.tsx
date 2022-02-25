@@ -7,8 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 
-import { Code } from "../components/Code";
-import { BG_COLOR } from "../helpers/colors";
+import { BG_COLOR2 } from "../helpers/colors";
 import { typeWriter } from "../Reactive";
 
 export const CheckOnGithub: React.FC = () => {
@@ -26,8 +25,7 @@ export const CheckOnGithub: React.FC = () => {
       style={{
         color: "white",
         fontSize: 70,
-        fontFamily: "Cubano",
-        backgroundColor: BG_COLOR,
+        backgroundColor: BG_COLOR2,
       }}
     >
       <Series>

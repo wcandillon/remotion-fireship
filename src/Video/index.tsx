@@ -9,7 +9,6 @@ import { Reactive } from "./Reactive";
 import { StorifyData } from "./StorifyData";
 import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
-import { DataDriven } from "./DataDriven";
 import { VideoInReact } from "./VideoInReact";
 import { IntroducingRemotion } from "./IntroducingRemotion";
 import { LikeAndSubscribe } from "./LikeAndSubscribe";
@@ -18,8 +17,7 @@ import { MadeDifferent } from "./components/MadeDifferent";
 import { DevTools } from "./components/DevTools";
 import { VideoMadeInReact } from "./VideoMadeInReact";
 import { FlipVideo } from "./Flipbook/FlipVideo";
-import { EndOfThisVideo } from "./EndOfThisVideo";
-import { ReverseDataDriven } from "./DataDriven/ReverseDataDriven";
+import { ForwardsDataDriven } from "./DataDriven/ForwardsDataDriven";
 
 const audio = staticFile("/audio.wav");
 const usingRemotion = staticFile("/videos/using-remotion.mp4");
@@ -73,11 +71,8 @@ export const Remotion = () => {
       <Sequence from={1250} durationInFrames={200}>
         <WeatherMap />
       </Sequence>
-      <Sequence from={1450} durationInFrames={50}>
-        <EndOfThisVideo />
-      </Sequence>
-      <Sequence from={1500} durationInFrames={150}>
-        <ReverseDataDriven />
+      <Sequence from={1450} durationInFrames={200}>
+        <ForwardsDataDriven />
       </Sequence>
       <Sequence from={1650} durationInFrames={50}>
         <LikeAndSubscribe />
