@@ -26,6 +26,7 @@ const Container = ({ children }: ContainerProps) => {
           width: center.x,
           justifyContent: "center",
           alignItems: "center",
+          left: -300,
         }}
       >
         <View
@@ -42,7 +43,7 @@ const Container = ({ children }: ContainerProps) => {
       <View
         style={{
           ...StyleSheet.absoluteFillObject,
-          left: center.x,
+          left: center.x - 300,
           width: center.x,
           justifyContent: "center",
           alignItems: "center",
@@ -63,10 +64,20 @@ export const WeatherMap: React.FC = () => {
             <RainMap />
             <Code
               minWidth={1800}
-              fontSize={110}
+              fontSize={80}
               source={`const Rain = () => {
   return (
-   <RainDrops />
+    <AbsoluteFill>
+      {new Array(300)
+        .fill(true)
+        .map((_, i) => (
+          <RainDrop
+            x={random(\`x-$\{i}\`)}
+            delay={random(\`d-$\{i}\`)}
+            size={random(\`s-$\{i}\`)}
+          />
+        ))}
+    </AbsoluteFill>
   );
 };`}
             />
@@ -77,12 +88,19 @@ export const WeatherMap: React.FC = () => {
             <CloudyMap />
             <Code
               minWidth={1800}
-              fontSize={110}
-              source={`const Cloudy = () => {
+              fontSize={80}
+              source={`const Clouds = () => {
   return (
-   <Clouds />
+    <AbsoluteFill>
+      <Cloud delay={0} x={700} y={650} />
+      <Cloud delay={3} x={200} y={800} />
+      <Cloud delay={6} x={600} y={1000} />
+      <Cloud delay={10} x={300} y={1300} />
+      <Cloud delay={14} x={750} y={1450} />
+    </AbsoluteFill>
   );
-};`}
+};
+`}
             />
           </Container>
         </Series.Sequence>

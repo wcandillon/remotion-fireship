@@ -5,8 +5,10 @@ import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 export const Cloud: React.FC<
   SVGProps<SVGSVGElement> & {
     delay: number;
+    y: number;
+    x: number;
   }
-> = ({ style, delay, ...props }) => {
+> = ({ style, delay, y: top, x: left, ...props }) => {
   const { fps } = useVideoConfig();
   const frame = useCurrentFrame();
   const entry = spring({
@@ -27,6 +29,8 @@ export const Cloud: React.FC<
         transform: `translateX(${translateX}px)`,
         position: "absolute",
         width: 250,
+        top,
+        left,
       }}
       {...props}
       viewBox="0 0 640 512"
