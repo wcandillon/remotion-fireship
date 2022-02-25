@@ -1,3 +1,4 @@
+import { first } from "lodash";
 import type { FC } from "react";
 import { useState } from "react";
 import { interpolate, spring, useVideoConfig } from "remotion";
@@ -8,6 +9,7 @@ import { BG_COLOR2 } from "../helpers/colors";
 import { getFont } from "../helpers/load-font";
 
 import { Arc } from "./Arc";
+import { MouseCursor } from "./MouseCursor";
 
 const Container = styled.div`
   flex: 1;
@@ -22,7 +24,6 @@ const ZIndex1 = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -68,24 +69,6 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const offset1 = interpolate(spring1, [0, 1], [1080, 0]);
   const offset2 = interpolate(spring2, [0, 1], [1080, 0]);
 
-  const text = (
-    <>
-      <div style={{ transform: `translateY(${offset1}px)` }}>
-        <FakeDevTools>
-          <Text>This</Text>
-        </FakeDevTools>
-        <Text> </Text>
-        <Text>video </Text>
-        <Text>is</Text>
-      </div>
-      <div style={{ transform: `translateY(${offset2}px)` }}>
-        <Text>made </Text>
-        <Text>with </Text>
-        <Text>React</Text>
-      </div>
-    </>
-  );
-
   const arcs = (
     <>
       <Arc rotation={0 + 30} frame={frame} />
@@ -95,6 +78,18 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
   );
 
   const opacity = 1;
+  const firstEnabled = Boolean(
+    interpolate(frame, [36, 37, 49, 50], [0, 1, 1, 0], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+    })
+  );
+  const secondEnabled = Boolean(
+    interpolate(frame, [52, 53], [0, 1], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+    })
+  );
 
   return (
     <Container
@@ -121,7 +116,35 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
         </defs>
         {arcs}
       </svg>
-      <ZIndex1 style={{ color: "white", fontFamily: "Cubano" }}>{text}</ZIndex1>
+      <ZIndex1 style={{ color: "white", fontFamily: "Cubano" }}>
+        <div style={{ transform: `translateY(${offset1}px)` }}>
+          <Text>This</Text>
+          <Text> </Text>
+          <Text>video </Text>
+          <Text>is</Text>
+        </div>
+        <div style={{ transform: `translateY(${offset2}px)` }}>
+          <Text>made </Text>
+          <FakeDevTools
+            width={100.25}
+            height={35.1}
+            clName="sc-dJjYzT"
+            enabled={firstEnabled}
+          >
+            <Text>with</Text>
+          </FakeDevTools>
+          <Text> </Text>
+          <FakeDevTools
+            width={125.44}
+            height={35.1}
+            clName="sc-fotOHu"
+            enabled={secondEnabled}
+          >
+            <Text>React</Text>
+          </FakeDevTools>
+        </div>
+      </ZIndex1>
+      <MouseCursor />
     </Container>
   );
 };

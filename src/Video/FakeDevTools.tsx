@@ -1,8 +1,20 @@
 import React from "react";
 
-export const FakeDevTools: React.FC = ({ children }) => {
+export const FakeDevTools: React.FC<{
+  enabled: boolean;
+  clName: string;
+  width: number;
+  height: number;
+}> = ({ children, enabled, clName, width, height }) => {
+  if (!enabled) {
+    return <>{children}</>;
+  }
   return (
-    <>
+    <span
+      style={{
+        display: "inline-block",
+      }}
+    >
       <div
         style={{
           backgroundColor: "white",
@@ -30,7 +42,7 @@ export const FakeDevTools: React.FC = ({ children }) => {
               color: "blue",
             }}
           >
-            .sc-5fsdfl
+            .{clName}
           </span>
         </span>
         <span
@@ -41,7 +53,7 @@ export const FakeDevTools: React.FC = ({ children }) => {
             fontFamily: "Helvetica",
           }}
         >
-          100.25×35.1
+          {width}×{height}
         </span>
       </div>
       <span
@@ -53,6 +65,6 @@ export const FakeDevTools: React.FC = ({ children }) => {
       >
         {children}
       </span>
-    </>
+    </span>
   );
 };
