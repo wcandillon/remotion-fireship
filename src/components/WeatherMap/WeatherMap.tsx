@@ -1,59 +1,14 @@
-import type { ReactNode } from "react";
 import React from "react";
-import { View, StyleSheet } from "react-native";
 import { AbsoluteFill, Series } from "remotion";
 
-import { CANVAS } from "../../Video/components/Canvas";
 import { Code } from "../../Video/components/Code";
 import { BG_COLOR2 } from "../../Video/helpers/colors";
 
 import { CloudyMap } from "./CloudyMap";
+import { Container } from "./Container";
+import { MindExplode } from "./MindExplode";
 import { RainMap } from "./RainMap";
 import { ThunderstormMap } from "./ThunderstormMap";
-
-const { center } = CANVAS;
-
-interface ContainerProps {
-  children: ReactNode | ReactNode[];
-}
-
-const Container = ({ children }: ContainerProps) => {
-  const [c1, c2] = React.Children.toArray(children);
-  return (
-    <>
-      <AbsoluteFill
-        style={{
-          width: center.x,
-          justifyContent: "center",
-          alignItems: "center",
-          left: -300,
-        }}
-      >
-        <View
-          style={{
-            width: 1080,
-            height: 1920,
-            backgroundColor: "#13001e",
-            overflow: "hidden",
-          }}
-        >
-          {c1}
-        </View>
-      </AbsoluteFill>
-      <View
-        style={{
-          ...StyleSheet.absoluteFillObject,
-          left: center.x - 300,
-          width: center.x,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        {c2}
-      </View>
-    </>
-  );
-};
 
 export const WeatherMap: React.FC = () => {
   return (
@@ -63,6 +18,7 @@ export const WeatherMap: React.FC = () => {
           <Container>
             <RainMap />
             <Code
+              yOffset={0}
               minWidth={1800}
               fontSize={80}
               source={`const Rain = () => {
@@ -87,6 +43,7 @@ export const WeatherMap: React.FC = () => {
           <Container>
             <CloudyMap />
             <Code
+              yOffset={0}
               minWidth={1800}
               fontSize={80}
               source={`const Clouds = () => {
@@ -105,18 +62,7 @@ export const WeatherMap: React.FC = () => {
           </Container>
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
-          <Container>
-            <ThunderstormMap />
-            <Code
-              minWidth={1800}
-              fontSize={110}
-              source={`const Tornado = () => {
-  return (
-   <TotalDestruction />
-  );
-};`}
-            />
-          </Container>
+          <MindExplode />
         </Series.Sequence>
       </Series>
     </AbsoluteFill>

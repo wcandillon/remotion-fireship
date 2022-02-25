@@ -25,9 +25,10 @@ interface CodeProps {
   source: string;
   fontSize: number;
   minWidth: number;
+  yOffset: number;
 }
 
-export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
+export const Code = ({ source, fontSize, minWidth, yOffset }: CodeProps) => {
   return (
     <View>
       <View
@@ -43,7 +44,7 @@ export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
         <Circle color="#FFBC30" />
         <Circle color="#29C93F" />
       </View>
-      <View
+      <div
         style={{
           padding: 50,
           paddingTop: 0,
@@ -52,6 +53,7 @@ export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
           backgroundColor: theme.plain.backgroundColor,
           minWidth,
           display: "flex",
+          transform: `translateY(${yOffset}px)`,
         }}
       >
         <Highlight {...defaultProps} code={source} language="jsx" theme={theme}>
@@ -74,7 +76,7 @@ export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
             </pre>
           )}
         </Highlight>
-      </View>
+      </div>
     </View>
   );
 };
