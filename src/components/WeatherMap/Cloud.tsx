@@ -17,7 +17,7 @@ export const Cloud: React.FC<
     },
   });
 
-  const translateX = interpolate(entry, [0, 1], [800, 0]);
+  const translateX = interpolate(entry, [0, 1], [1000, 0]);
 
   return (
     <svg
