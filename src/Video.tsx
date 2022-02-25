@@ -15,7 +15,7 @@ import { WeatherMap } from "./components/WeatherMap/WeatherMap";
 import { DataDriven } from "./Video/DataDriven";
 import { LikeAndSubscribe } from "./Video/LikeAndSubscribe";
 import { StorifyData } from "./Video/StorifyData";
-import { EndOfThisVideo } from "./Video/EndOfThisVideo";
+import { ZoomOutEditor } from "./Video/ZoomOutEditor";
 
 const { width, height } = CANVAS;
 const fps = 30;
@@ -138,8 +138,8 @@ export const RemotionVideo = () => {
         height={height}
       />
       <Composition
-        id="EndOfThisVideo"
-        component={EndOfThisVideo}
+        id="BoardRoomZoomOut"
+        component={ZoomOutEditor}
         durationInFrames={30}
         fps={fps}
         width={width}
