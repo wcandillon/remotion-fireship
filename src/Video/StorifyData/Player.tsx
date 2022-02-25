@@ -54,7 +54,7 @@ export const Player: React.FC = () => {
             lineHeight: "1em",
           }}
         >
-          video.mp4
+          news.mp4
         </div>
         <div
           style={{

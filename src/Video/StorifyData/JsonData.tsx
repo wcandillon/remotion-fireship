@@ -63,23 +63,28 @@ export const JsonData: React.FC = () => {
         >
           <span>
             <div>
-              <span style={{ color: "#DCDCAA" }}>{'"headline": '}</span>
+              <span style={{ color: "#DCDCAA" }}>{"{"}</span>
+            </div>
+            <div>
+              <span style={{ color: "#DCDCAA" }}>{'  "headline": '}</span>
               <span style={{ color: "#CE9178" }}>
                 "us-east-1 hit by Meteor"
               </span>
               ,
             </div>
             <div>
-              <span style={{ color: "#DCDCAA" }}>{'"tagline": '}</span>
+              <span style={{ color: "#DCDCAA" }}>{'  "tagline": '}</span>
               <span style={{ color: "#CE9178" }}>"Data irrevocably lost"</span>,
             </div>
             <div>
-              <span style={{ color: "#DCDCAA" }}>{'"cover": '}</span>
+              <span style={{ color: "#DCDCAA" }}>{'  "cover": '}</span>
               <br />
               <span style={{ color: "#CE9178", marginLeft: 50 }}>
-                "https://cdn.fireship.io/cover.jpeg"
+                {'  "https://cdn.fireship.io/cover.jpeg"'}
               </span>
-              ,
+            </div>
+            <div>
+              <span style={{ color: "#DCDCAA" }}>{"}"}</span>
             </div>
           </span>
         </div>
