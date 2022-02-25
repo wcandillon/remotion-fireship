@@ -1,7 +1,9 @@
 import type { FC } from "react";
+import { useState } from "react";
 import { interpolate, spring, useVideoConfig } from "remotion";
 import styled from "styled-components";
 
+import { FakeDevTools } from "../FakeDevTools";
 import { BG_COLOR2 } from "../helpers/colors";
 import { getFont } from "../helpers/load-font";
 
@@ -30,6 +32,8 @@ const Text = styled.span`
   font-family: Cubano;
   font-size: 180px;
   font-weight: 700;
+  line-height: 1;
+  white-space: pre;
 `;
 
 getFont();
@@ -67,7 +71,10 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
   const text = (
     <>
       <div style={{ transform: `translateY(${offset1}px)` }}>
-        <Text>This </Text>
+        <FakeDevTools>
+          <Text>This</Text>
+        </FakeDevTools>
+        <Text> </Text>
         <Text>video </Text>
         <Text>is</Text>
       </div>
@@ -103,7 +110,6 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
           width,
           height,
           position: "absolute",
-          zIndex: 4,
         }}
       >
         <defs>
@@ -114,26 +120,8 @@ export const Intro: FC<{ frame: number }> = ({ frame }) => {
           <mask id="mask">{arcs}</mask>
         </defs>
         {arcs}
-        <g
-          style={{
-            width,
-            height,
-            position: "absolute",
-          }}
-        >
-          <foreignObject
-            style={{
-              width,
-              height,
-              position: "absolute",
-            }}
-          >
-            <ZIndex1 style={{ color: "white", fontFamily: "Cubano" }}>
-              {text}
-            </ZIndex1>
-          </foreignObject>
-        </g>
       </svg>
+      <ZIndex1 style={{ color: "white", fontFamily: "Cubano" }}>{text}</ZIndex1>
     </Container>
   );
 };

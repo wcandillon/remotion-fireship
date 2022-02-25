@@ -20,7 +20,6 @@ import { FlipVideo } from "./Flipbook/FlipVideo";
 import { ForwardsDataDriven } from "./DataDriven/ForwardsDataDriven";
 
 const audio = staticFile("/audio.wav");
-const usingRemotion = staticFile("/videos/using-remotion.mp4");
 
 export const Remotion = () => {
   return (
@@ -35,11 +34,8 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={130}>
           <DevTools />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={60}>
+        <Series.Sequence durationInFrames={120}>
           <VideoMadeInReact />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={60}>
-          <Video src={usingRemotion} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={120}>
           <FlipVideo />
