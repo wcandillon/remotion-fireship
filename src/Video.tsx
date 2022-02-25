@@ -16,6 +16,7 @@ import { DataDriven } from "./Video/DataDriven";
 import { LikeAndSubscribe } from "./Video/LikeAndSubscribe";
 import { StorifyData } from "./Video/StorifyData";
 import { ZoomOutEditor } from "./Video/ZoomOutEditor";
+import { ToCodeEditor } from "./Video/ZoomOutEditor/ToCodeEditor";
 
 const { width, height } = CANVAS;
 const fps = 30;
@@ -140,6 +141,14 @@ export const RemotionVideo = () => {
       <Composition
         id="BoardRoomZoomOut"
         component={ZoomOutEditor}
+        durationInFrames={30}
+        fps={fps}
+        width={width}
+        height={height}
+      />
+      <Composition
+        id="ToCodeEditor"
+        component={ToCodeEditor}
         durationInFrames={30}
         fps={fps}
         width={width}

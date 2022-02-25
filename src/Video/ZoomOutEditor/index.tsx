@@ -9,6 +9,8 @@ import {
   useVideoConfig,
 } from "remotion";
 
+import { BG_COLOR2 } from "../helpers/colors";
+
 const initialScale = 1.83;
 const initialTranslateX = -278;
 const initialTranslateY = 205;
@@ -33,6 +35,7 @@ export const ZoomOutEditor: React.FC = () => {
       style={{
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: BG_COLOR2,
       }}
     >
       <Img
