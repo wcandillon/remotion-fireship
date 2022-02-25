@@ -30,7 +30,11 @@ interface CodeProps {
 
 export const Code = ({ source, fontSize, minWidth, yOffset }: CodeProps) => {
   return (
-    <View>
+    <div
+      style={{
+        transform: `translateY(${yOffset}px)`,
+      }}
+    >
       <View
         style={{
           flexDirection: "row",
@@ -53,7 +57,6 @@ export const Code = ({ source, fontSize, minWidth, yOffset }: CodeProps) => {
           backgroundColor: theme.plain.backgroundColor,
           minWidth,
           display: "flex",
-          transform: `translateY(${yOffset}px)`,
         }}
       >
         <Highlight {...defaultProps} code={source} language="jsx" theme={theme}>
@@ -77,7 +80,7 @@ export const Code = ({ source, fontSize, minWidth, yOffset }: CodeProps) => {
           )}
         </Highlight>
       </div>
-    </View>
+    </div>
   );
 };
 

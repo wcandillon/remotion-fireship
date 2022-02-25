@@ -1,5 +1,5 @@
 import React from "react";
-import { interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 
 import { Code } from "../../Video/components/Code";
 
@@ -8,19 +8,20 @@ import { ThunderstormMap } from "./ThunderstormMap";
 
 export const MindExplode: React.FC = () => {
   const frame = useCurrentFrame();
-  const yOffset = interpolate(frame, [0, 90], [1200, -1800], {
+  const yOffset = interpolate(frame, [0, 70], [1200, -1200], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
   return (
-    <Container>
-      <ThunderstormMap />
-      <Code
-        yOffset={yOffset}
-        minWidth={1800}
-        fontSize={60}
-        source={`const Thunderstorm: React.FC = () => {
+    <AbsoluteFill>
+      <Container>
+        <ThunderstormMap />
+        <Code
+          yOffset={yOffset}
+          minWidth={1800}
+          fontSize={60}
+          source={`const Thunderstorm: React.FC = () => {
   const frame = useCurrentFrame();
   return (
     <AbsoluteFill>
@@ -56,9 +57,9 @@ export const MindExplode: React.FC = () => {
             random(\`color$\{i}$\{j}\`),
             [0, 1],
             ["white", "#eee"]
-          );
+            );
 
-          return (
+            return (
             <Dot
               centerX={centerX}
               color={color}
@@ -67,14 +68,15 @@ export const MindExplode: React.FC = () => {
               xPosNoise={xPosNoise}
               yPosNoise={yPosNoise}
               size={size}
-            />
+              />
+              );
+            });
+          }).flat(1)}
+          </AbsoluteFill>
           );
-        });
-      }).flat(1)}
+        };`}
+        />
+      </Container>
     </AbsoluteFill>
-  );
-};`}
-      />
-    </Container>
   );
 };

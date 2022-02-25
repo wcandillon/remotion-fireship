@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Series } from "remotion";
+import { AbsoluteFill, Series, staticFile, Video } from "remotion";
 
 import { Code } from "../../Video/components/Code";
 import { BG_COLOR2 } from "../../Video/helpers/colors";
@@ -8,7 +8,6 @@ import { CloudyMap } from "./CloudyMap";
 import { Container } from "./Container";
 import { MindExplode } from "./MindExplode";
 import { RainMap } from "./RainMap";
-import { ThunderstormMap } from "./ThunderstormMap";
 
 export const WeatherMap: React.FC = () => {
   return (
@@ -61,8 +60,17 @@ export const WeatherMap: React.FC = () => {
             />
           </Container>
         </Series.Sequence>
-        <Series.Sequence durationInFrames={90}>
+        <Series.Sequence durationInFrames={70}>
           <MindExplode />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={80}>
+          <Video
+            style={{
+              width: "100%",
+              position: "absolute",
+            }}
+            src={staticFile("images/mind-blown.mp4")}
+          />
         </Series.Sequence>
       </Series>
     </AbsoluteFill>
