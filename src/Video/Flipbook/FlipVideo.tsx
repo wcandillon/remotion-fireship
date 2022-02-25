@@ -56,6 +56,7 @@ export const FlipVideo: React.FC = () => {
             borderRadius: 40,
             color: "white",
             background: BG_COLOR,
+            marginTop: 1200,
             transform: `scale(${scale})`,
           }}
         >
