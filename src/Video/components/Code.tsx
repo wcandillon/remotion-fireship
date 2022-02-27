@@ -25,11 +25,16 @@ interface CodeProps {
   source: string;
   fontSize: number;
   minWidth: number;
+  yOffset: number;
 }
 
-export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
+export const Code = ({ source, fontSize, minWidth, yOffset }: CodeProps) => {
   return (
-    <View>
+    <div
+      style={{
+        transform: `translateY(${yOffset}px)`,
+      }}
+    >
       <View
         style={{
           flexDirection: "row",
@@ -43,7 +48,7 @@ export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
         <Circle color="#FFBC30" />
         <Circle color="#29C93F" />
       </View>
-      <View
+      <div
         style={{
           padding: 50,
           paddingTop: 0,
@@ -74,8 +79,8 @@ export const Code = ({ source, fontSize, minWidth }: CodeProps) => {
             </pre>
           )}
         </Highlight>
-      </View>
-    </View>
+      </div>
+    </div>
   );
 };
 

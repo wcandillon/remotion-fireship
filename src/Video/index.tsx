@@ -61,13 +61,13 @@ export const Remotion = () => {
       <Sequence from={1080} durationInFrames={80}>
         <WeatherAPI />
       </Sequence>
-      <Sequence from={1160} durationInFrames={90}>
+      <Sequence from={1160} durationInFrames={120}>
         <Component />
       </Sequence>
-      <Sequence from={1250} durationInFrames={200}>
+      <Sequence from={1250} durationInFrames={230}>
         <WeatherMap />
       </Sequence>
-      <Sequence from={1450} durationInFrames={200}>
+      <Sequence from={1480} durationInFrames={170}>
         <ForwardsDataDriven />
       </Sequence>
       <Sequence from={1650} durationInFrames={50}>

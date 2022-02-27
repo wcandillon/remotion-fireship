@@ -26,7 +26,7 @@ export const DataDriven: React.FC<{
   const remappedFrame = remapSpeed({
     frame,
     speed: (fr) =>
-      interpolate(fr, [0, 100, 140], [0, 0, 4], {
+      interpolate(fr, [0, 70, 110], [0, 0, 4], {
         extrapolateRight: "clamp",
       }),
   });
@@ -42,7 +42,7 @@ export const DataDriven: React.FC<{
 
   const iconScale = spring({
     fps,
-    frame: frame - 150,
+    frame: frame - 120,
     config: {
       damping: 200,
     },
