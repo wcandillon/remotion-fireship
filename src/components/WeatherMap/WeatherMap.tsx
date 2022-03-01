@@ -60,17 +60,8 @@ export const WeatherMap: React.FC = () => {
             />
           </Container>
         </Series.Sequence>
-        <Series.Sequence durationInFrames={70}>
+        <Series.Sequence durationInFrames={150}>
           <MindExplode />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={80}>
-          <Video
-            style={{
-              width: "100%",
-              position: "absolute",
-            }}
-            src={staticFile("images/mind-blown.mp4")}
-          />
         </Series.Sequence>
       </Series>
     </AbsoluteFill>
