@@ -46,11 +46,8 @@ export const Remotion = () => {
         <Series.Sequence durationInFrames={90}>
           <Reactive />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={90}>
+        <Series.Sequence durationInFrames={132}>
           <VideoInReact />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={42}>
-          <IntroducingRemotion />
         </Series.Sequence>
         <Series.Sequence durationInFrames={120}>
           <HdTo4k>
