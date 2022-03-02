@@ -9,7 +9,7 @@ import {
 } from "remotion";
 
 export const videoThumbnails = [
-  staticFile("images/insert-thumbnail.png"),
+  staticFile("images/insert-thumbnail.jpg"),
   "https://i.ytimg.com/vi/1L2hrG-7i2Y/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjOlJs87fcIbEotaLNjpELsY5cDg",
   "https://i.ytimg.com/vi/vAoB4VbhRzM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsrbHHkaBWer5vm6Tvt_6s8zPazA",
   "https://i.ytimg.com/vi/ouncVBiye_M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeK3IupDkntLvbunqR8dOFCP1-LA",
