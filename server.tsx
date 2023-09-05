@@ -48,18 +48,17 @@ app.get("/", async (req, res) => {
       path.join(os.tmpdir(), "remotion-")
     );
     const { assetsInfo } = await renderFrames({
-      config: video,
-      webpackBundle: bundled,
+      composition: video,
+      serveUrl: bundled,
       onStart: () => console.log("Rendering frames..."),
       onFrameUpdate: (f) => {
         if (f % 10 === 0) {
           console.log(`Rendered frame ${f}`);
         }
       },
-      parallelism: null,
+      concurrency: null,
       outputDir: tmpDir,
       inputProps: req.query,
-      compositionId,
       imageFormat: "jpeg",
     });
 
@@ -71,7 +70,6 @@ app.get("/", async (req, res) => {
       height: video.height,
       width: video.width,
       outputLocation: finalOutput,
-      imageFormat: "jpeg",
       assetsInfo,
     });
     cache.set(JSON.stringify(req.query), finalOutput);

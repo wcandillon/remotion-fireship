@@ -3,7 +3,9 @@ import { AbsoluteFill } from "remotion";
 
 import { CANVAS } from "../components/Canvas";
 
-export const HdTo4k: React.FC = ({ children }) => {
+export const HdTo4k: React.FC<{
+  children: React.ReactNode;
+}> = ({ children }) => {
   return (
     <AbsoluteFill>
       <AbsoluteFill

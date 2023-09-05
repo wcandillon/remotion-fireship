@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Series, staticFile, Video } from "remotion";
+import { AbsoluteFill, Series } from "remotion";
 
 import { Code } from "../../Video/components/Code";
 import { BG_COLOR2 } from "../../Video/helpers/colors";

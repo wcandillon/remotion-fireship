@@ -91,6 +91,9 @@ export const RemotionVideo = () => {
         fps={fps}
         width={width}
         height={height}
+        defaultProps={{
+          frame: 0,
+        }}
       />
       <Composition
         id="LikeAndSubscribe"

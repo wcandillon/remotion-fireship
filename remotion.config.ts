@@ -1,6 +1,22 @@
-//import { Config } from "remotion";
+// See all configuration options: https://remotion.dev/docs/config
+// Each option also is available as a CLI flag: https://remotion.dev/docs/cli
 
-// Config.Rendering.setImageFormat("png");
-// Config.Output.setPixelFormat("yuva444p10le");
-// Config.Output.setCodec("prores");
-// Config.Output.setProResProfile("4444");
+// Note: When using the Node.JS APIs, the config file doesn't apply. Instead, pass options directly to the APIs
+
+import { Config } from "@remotion/cli/config";
+
+Config.setVideoImageFormat("jpeg");
+Config.setOverwriteOutput(true);
+
+Config.overrideWebpackConfig((config) => {
+  return {
+    ...config,
+    resolve: {
+      ...config.resolve,
+      alias: {
+        ...config.resolve?.alias,
+        "react-native$": "react-native-web",
+      },
+    },
+  };
+});

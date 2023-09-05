@@ -10,7 +10,6 @@ import { StorifyData } from "./StorifyData";
 import { WeatherAPI } from "./WeatherAPI";
 import { Component } from "./WeatherAPI/Component";
 import { VideoInReact } from "./VideoInReact";
-import { IntroducingRemotion } from "./IntroducingRemotion";
 import { LikeAndSubscribe } from "./LikeAndSubscribe";
 import { CheckOnGithub } from "./CheckOnGithub/Github";
 import { MadeDifferent } from "./components/MadeDifferent";

@@ -11,7 +11,7 @@ export interface Hour {
   precipprob: number;
   snow: number;
   snowdepth: number;
-  preciptype?: any;
+  preciptype?: unknown;
   windgust: number;
   windspeed: number;
   winddir: number;
@@ -24,7 +24,7 @@ export interface Hour {
   severerisk: number;
   conditions: string;
   icon: string;
-  stations?: any;
+  stations?: unknown;
   source: string;
 }
 
@@ -41,7 +41,7 @@ export interface Day {
   humidity: number;
   precip: number;
   precipprob: number;
-  precipcover?: any;
+  precipcover?: unknown;
   preciptype: string[];
   snow: number;
   snowdepth: number;
@@ -115,10 +115,10 @@ export interface CurrentConditions {
   humidity: number;
   dew: number;
   precip: number;
-  precipprob?: any;
+  precipprob?: unknown;
   snow: number;
   snowdepth: number;
-  preciptype?: any;
+  preciptype?: unknown;
   windgust: number;
   windspeed: number;
   winddir: number;

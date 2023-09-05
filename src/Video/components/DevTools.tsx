@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Img,
-  Sequence,
-  Series,
-  spring,
-  staticFile,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Sequence, Series } from "remotion";
 
 import { ZoomOutEditor } from "../ZoomOutEditor";
 import { ToCodeEditor } from "../ZoomOutEditor/ToCodeEditor";

@@ -5,6 +5,7 @@ export const FakeDevTools: React.FC<{
   clName: string;
   width: number;
   height: number;
+  children: React.ReactNode;
 }> = ({ children, enabled, clName, width, height }) => {
   if (!enabled) {
     return <>{children}</>;

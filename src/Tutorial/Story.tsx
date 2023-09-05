@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { continueRender, delayRender, staticFile } from "remotion";
 
 import { France } from "../components/WeatherMap/France";
@@ -7,11 +7,11 @@ import { Switzerland } from "../components/WeatherMap/Switzerland";
 import type { WeatherData } from "./WeatherData";
 import { WeatherMap } from "./WeatherMap";
 
-interface StoryProps {
+type StoryProps = {
   url: string;
-}
+};
 
-export const Story = ({ url }: StoryProps) => {
+export const Story: React.FC<StoryProps> = ({ url }) => {
   const [data, setData] = useState<WeatherData | null>(null);
   const [handle] = useState(() => delayRender());
 
@@ -25,10 +25,10 @@ export const Story = ({ url }: StoryProps) => {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
   if (!data) {
     return null;
   }
-  console.log(data);
   return (
     <WeatherMap type={data.days[0].icon} temperature={data.days[0].temp}>
       {data.country === "france" && <France />}

@@ -15,6 +15,7 @@ export const Component: React.FC = () => {
       }}
     >
       <Code
+        yOffset={0}
         minWidth={3200}
         source={`<AbsoluteFill>
   <Map />

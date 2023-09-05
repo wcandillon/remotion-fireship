@@ -50,7 +50,7 @@ export const Reactive = () => {
         }}
       >
         <View style={{ paddingLeft: 120 }}>
-          <Code source={source} minWidth={1800} />
+          <Code yOffset={0} source={source} minWidth={1800} />
         </View>
       </View>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
