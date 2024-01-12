@@ -5,18 +5,9 @@
 
 import { Config } from "@remotion/cli/config";
 
+import { webpackOverride } from "./webpack-override";
+
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 
-Config.overrideWebpackConfig((config) => {
-  return {
-    ...config,
-    resolve: {
-      ...config.resolve,
-      alias: {
-        ...config.resolve?.alias,
-        "react-native$": "react-native-web",
-      },
-    },
-  };
-});
+Config.overrideWebpackConfig(webpackOverride);

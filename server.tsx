@@ -17,9 +17,11 @@ import {
 } from "@remotion/renderer";
 import express from "express";
 
+import { webpackOverride } from "./webpack-override";
+
 const app = express();
 const port = process.env.PORT || 8000;
-const compositionId = "HelloWorld";
+const compositionId = "Main";
 
 const cache = new Map<string, string>();
 
@@ -36,7 +38,10 @@ app.get("/", async (req, res) => {
       sendFile(cache.get(JSON.stringify(req.query)) as string);
       return;
     }
-    const bundled = await bundle(path.join(__dirname, "./src/index.tsx"));
+    const bundled = await bundle({
+      entryPoint: path.join(__dirname, "./src/index.tsx"),
+      webpackOverride: webpackOverride,
+    });
     const comps = await getCompositions(bundled, { inputProps: req.query });
     const video = comps.find((c) => c.id === compositionId);
     if (!video) {
